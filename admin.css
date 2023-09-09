@@ -1,0 +1,139 @@
+@import url("user_profile.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+  color: white;
+}
+
+/* Global Styles */
+:root {
+  --primary-color: #e50914;
+  --dark-color: #141414;
+  --light-color: #f4f4f4;
+  --ff-poppins: "Poppins", sans-serif;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #999;
+}
+input {
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  background-color: #161616;
+  box-shadow: none;
+  width: 500px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+input[type="submit"] {
+  align-items: right;
+  background-color: #6735ae;
+  padding: 6px;
+  border-radius: 4px;
+  border: none;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 150px;
+  align-self: center;
+  margin-left: 10px;
+}
+label {
+  color: #fff;
+}
+.log {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: space-between; /* Add spacing between each label-input pair */
+}
+
+/* Optionally, you can style the labels and inputs separately */
+.log label {
+  flex: 1; /* Labels will take up 1/3 of the available space */
+  padding-right: 10px; /* Add some spacing between label and input */
+}
+
+.log input {
+  flex: 2; /* Input fields will take up 2/3 of the available space */
+  padding: 5px; /* Add some padding to inputs for better spacing */
+}
+
+label {
+  display: inline-block;
+}
+/*  
+.movie-form {
+  margin-top: 10rem;
+  align-items: center;
+  align-self: center;
+  margin: auto;
+  max-width: 1300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.movie-form form {
+  margin-top: 6rem;
+  justify-self: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  gap: 1.5rem;
+}
+
+
+/* 
+.movie-form form input[type="submit"] {
+  align-items: right;
+  background-color: #6735ae;
+  padding: 6px;
+  border-radius: 4px;
+  border: none;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 150px;
+  align-self: center;
+  margin-left: 10px;
+} */
+label {
+  color: #fff;
+}
+textarea {
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  background-color: #161616;
+  box-shadow: none;
+  width: 500px;
+  height: 150px;
+}
+
+.movie-form {
+  margin-bottom: 5rem;
+  max-width: 1350px;
+  margin: 30px 20px;
+  padding: 20px;
+  background: #0e0e0e;
+}

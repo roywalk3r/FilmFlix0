@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title and Meta Description -->
+    <meta
+      name="description"
+      content="Watch the latest and greatest movies on FilmFlix. Your ultimate destination for entertainment."
+    />
+
+    <!-- Meta Keywords (optional) -->
+    <meta
+      name="keywords"
+      content="movies, film, entertainment, watch movies, film streaming, FilmFlix, filmflix,movie,streaming"
+    />
+    <link
+      rel="canonical"
+      href="https://rseann.helioho.st/assets/movieplay/a-royal-christmas-crush.html"
+    />
+    <title>Watch:Umbrella Academy S1</title>
+    <!-- Local Links -->
+    <link rel="stylesheet" href="../../assets/css/watch.css" />
+    <link
+      rel="stylesheet"
+      href="../../assets/swiperjs/swiper-scrollbar-min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../assets/boxicons-2.1.4/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/swiperjs/swiper-bundle.min.css" />
+    <script
+      src="https://kit.fontawesome.com/00a449879e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="shortcut icon" href="../img/fav-icon.png" type="image/x-icon" />
+
+    <!-- ====================font-awesome cdnjs link================= -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      .swiper {
+        width: 240px;
+        height: 320px;
+      }
+
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+        font-size: 22px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- Nav  -->
+      <div class="nav container">
+        <!-- logo -->
+        <a href="../../home.html" class="logo"> Film<span>Flix</span> </a>
+        <!-- Search Box -->
+        <div class="search-box">
+          <input type="search" id="search-input" placeholder="Search movie" />
+          <i class="bx bx-search" id="search-icon"></i>
+          <div class="results-container container" id="resultsContainer">
+            <!-- Search results will be displayed here -->
+          </div>
+        </div>
+        <!-- User -->
+        <a href="#" class="user">
+          <img
+            src="../../assets/img/user.png"
+            class="user-img"
+            onclick="toggleMenu()"
+          />
+        </a>
+        <!-- Nav Bar -->
+        <div class="navbar">
+          <a href="../../home.html#home" class="nav-link nav-active">
+            <i class="bx bx-home"></i>
+            <span class="nav-link-title">Home</span>
+          </a>
+          <a href="../../home.html#popular" class="nav-link">
+            <i class="bx bxs-hot"></i>
+            <span class="nav-link-title">Trending</span>
+          </a>
+          <a href="../../home.html#recommended" class="nav-link">
+            <i class="bx bx-compass"></i>
+            <span class="nav-link-title">Explore</span>
+          </a>
+          <a href="../../home.html#binge" class="nav-link">
+            <i class="bx bx-tv"></i>
+            <span class="nav-link-title">Movies</span>
+          </a>
+          <a href="../../home.html#for-you" class="nav-link">
+            <i class="bx bx-heart"></i>
+            <span class="nav-link-title">Favourite</span>
+          </a>
+        </div>
+
+        <!-- Submenu for User Settings -->
+        <div class="sub-menu-wrap" id="subMenu">
+          <div class="sub-menu">
+            <div class="user-info">
+              <img src="../../assets/img/user.png" alt="user" />
+              <h3>John Doe</h3>
+            </div>
+            <hr />
+
+            <!-- Submenu Links -->
+            <a href="#" class="sub-menu-link">
+              <img src="../img/profile.png" alt="profile" />
+              <p>Edit Profile</p>
+              <span>&gt;</span>
+            </a>
+
+            <a href="#" class="sub-menu-link">
+              <img src="../img/setting.png" alt="setting" />
+              <p>Settings & Privacy</p>
+              <span>&gt;</span>
+            </a>
+
+            <a href="#" class="sub-menu-link">
+              <img src="../img/help.png" alt="help" />
+              <p>Help & Support</p>
+              <span>&gt;</span>
+            </a>
+
+            <a href="../../login.html" class="sub-menu-link">
+              <img src="../img/logout.png" alt="logout" />
+              <p>Logout</p>
+              <span>&gt;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Play Movie Container -->
+    <div class="section-container body-container">
+      <div class="main-left">
+        <div class="movie-play">
+          <img
+            src="https://www.themoviedb.org/t/p/original/gHJhN9AJV4PmJ7YpLFa9ldDWuG8.jpg"
+            alt="thumbnail"
+            id="thumbnail"
+          />
+          <iframe
+            src="https://vidsrc.to/embed/tv/tt1312171/1/"
+            allowfullscreen
+            allowtransparency
+            allow="autoplay"
+            scrolling="no"
+            frameborder="0"
+            id="video-iframe"
+          ></iframe>
+
+          <i
+            class="fa-solid fa-play play-movie-btn"
+            style="color: #ffffff"
+            id="play-button"
+          ></i>
+        </div>
+        <ul class="episode-list" id="episodeList">
+          <!-- Episode Buttons from 1 to 10 -->
+          <button
+            class="episode-btn"
+            data-episode="1"
+            onclick="reset('newid1', 'https://rseann.helioho.st/watch/The-Umbrella-academy/the-umbrella-academy-s1.html', 'Episode 2', 'en');
+            changeEpisode('tt1312171', '1', '1'); changeButtonColor('1', '#5a2e98');"
+          >
+            Episode 1
+          </button>
+          <button
+            class="episode-btn"
+            data-episode="2"
+            onclick="reset('newid2', 'https://rseann.helioho.st/watch/The-Umbrella-academy/the-umbrella-academy-s1.html', 'Episode 3', 'en');
+            changeEpisode('tt1312171', '1', '2'); changeButtonColor('2', '#5a2e98');"
+          >
+            Episode 2
+          </button>
+          <button
+            class="episode-btn"
+            data-episode="3"
+            onclick="reset('newid3', 'https://rseann.helioho.st/watch/The-Umbrella-academy/the-umbrella-academy-s1.html', 'Episode 4', 'en');
+          changeEpisode('tt1312171', '1', '3'); changeButtonColor('3', '#5a2e98');"
+          >
+            Episode 3
+          </button>
+          <button
+            class="episode-btn"
+            data-episode="4"
+            onclick="reset('newid4', 'https://rseann.helioho.st/watch/The-Umbrella-academy/the-umbrella-academy-s1.html', 'Episode 5', 'en');
+          changeEpisode('tt1312171', '1', '4'); changeButtonColor('4', '#5a2e98');"
+          >
+            Episode 4
+          </button>
+          <button
+            class="episode-btn"
+            data-episode="5"
+            onclick="reset('newid5', 'https://rseann.helioho.st/watch/The-Umbrella-academy/the-umbrella-academy-s1.html', 'Episode 6', 'en');
+          changeEpisode('tt1312171', '1', '5'); changeButtonColor('5', '#5a2e98');"
+          >
+            Episode 5
+          </button>
+          <button
+            class="episode-btn"
+            data-episode="6"
+            onclick="reset('newid6', 'https://rseann.helioho.st/watch/The-Umbrella-academy/the-umbrella-academy-s1.html', 'Episode 7', 'en');
+          changeEpisode('tt1312171', '1', '6'); changeButtonColor('6', '#5a2e98');"
+          >
+            Episode 6
+          </button>
+          <button
+            class="episode-btn"
+            data-episode="7"
+            onclick="reset('newid7', 'https://rseann.helioho.st/watch/The-Umbrella-academy/the-umbrella-academy-s1.html', 'Episode 8', 'en');
+          changeEpisode('tt1312171', '1', '7'); changeButtonColor('7', '#5a2e98');"
+          >
+            Episode 7
+          </button>
+          <button
+            class="episode-btn"
+            data-episode="8"
+            onclick="reset('newid8', 'https://rseann.helioho.st/watch/The-Umbrella-academy/the-umbrella-academy-s1.html', 'Episode 9', 'en');
+          changeEpisode('tt1312171', '1', '8'); changeButtonColor('8', '#5a2e98');"
+          >
+            Episode 8
+          </button>
+          <button
+            class="episode-btn"
+            data-episode="9"
+            onclick="reset('newid9', 'https://rseann.helioho.st/watch/The-Umbrella-academy/the-umbrella-academy-s1.html', 'Episode 10', 'en');
+          changeEpisode('tt1312171', '1', '9'); changeButtonColor('9', '#5a2e98');"
+          >
+            Episode 9
+          </button>
+          <button
+            class="episode-btn"
+            data-episode="10"
+            onclick="reset('newid10', 'https://rseann.helioho.st/watch/The-Umbrella-academy/the-umbrella-academy-s1.html', 'Episode 11', 'en');
+          changeEpisode('tt1312171', '1', '10'); changeButtonColor('10', '#5a2e98');"
+          >
+            Episode 10
+          </button>
+        </ul>
+        <!-- About  -->
+        <div class="about-movie container">
+          <div class="sypnosis">
+            <img src="../../assets/img/umbrella-s1.jpg" alt="" class="img" />
+            <div class="content">
+              <h2 id="seriesName">Umbrella Academy season One</h2>
+              <div class="req">
+                <span><i class="bx bx-calendar-alt"></i> 2011</span>
+                <span class="age-req"><i>17+</i></span>
+                <span><i class="bx bx-time"></i> 1h - eps</span>
+              </div>
+              <p>
+                On the same day in October 1989, forty-three infants are
+                inexplicably born to random, unconnected women who showed no
+                signs of pregnancy the day before. Seven are adopted by Sir
+                Reginald Hargreeves, a billionaire industrialist, who creates
+                The Umbrella Academy and prepares his "children" to save the
+                world. But not everything went according to plan. In their
+                teenage years, the family fractured and the team disbanded. Now
+                almost thirty years old, the six surviving members reunite upon
+                the news of Hargreeves' passing. Luther, Diego, Allison, Klaus,
+                Vanya and Number Five work together to solve a mystery
+                surrounding their father's death. But the estranged family once
+                again begins to come apart due to their divergent personalities
+                and abilities, not to mention the imminent threat of a global
+                apocalypse.
+              </p>
+              <span id="release"
+                ><i class="fa fa-calendar"></i> Release date : 17<sup>th</sup>
+                April 2011</span
+              >
+              <span id="writer"
+                >Writer <span id="name">: Kate Somerville </span></span
+              >
+              <div class="rating-card">
+                <div class="rating-content">
+                  <h2 class="card-heading">7.81/10</h2>
+                  <span style="color: rgb(86, 39, 129)">4314 reviews</span>
+                </div>
+                <div class="stars">
+                  <input type="radio" name="rating" id="star5" />
+                  <label for="star5"><i class="fa fa-star"></i></label>
+                  <input type="radio" name="rating" id="star4" />
+                  <label for="star4"><i class="fa fa-star"></i></label>
+                  <input type="radio" name="rating" id="star3" />
+                  <label for="star3"><i class="fa fa-star"></i></label>
+                  <input type="radio" name="rating" id="star2" />
+                  <label for="star2"><i class="fa fa-star"></i></label>
+                  <input type="radio" name="rating" id="star1" />
+                  <label for="star1"><i class="fa fa-star"></i></label>
+                </div>
+                <p class="thought">what do you think about the movie?</p>
+              </div>
+            </div>
+          </div>
+          <div class="seasons">
+            <div class="card">
+              <img src="../../assets/img/along-with-the-gods.jpg" alt="" />
+              <div class="overlay">
+                <div class="centered-text">SEASON 1</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../../assets/img/along-with-the-gods.jpg" alt="" />
+              <div class="overlay">
+                <div class="centered-text">SEASON 2</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../../assets/img/along-with-the-gods.jpg" alt="" />
+              <div class="overlay">
+                <div class="centered-text">SEASON 3</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../../assets/img/along-with-the-gods.jpg" alt="" />
+              <div class="overlay">
+                <div class="centered-text">SEASON 4</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../../assets/img/along-with-the-gods.jpg" alt="" />
+              <div class="overlay">
+                <div class="centered-text">SEASON 5</div>
+              </div>
+            </div>
+          </div>
+          <!-- Movie Cast  -->
+          <h2 class="cast-heading">Top Cast</h2>
+          <div class="cast">
+            <div class="cast-box">
+              <a
+                href="https://www.themoviedb.org/person/558900-stephen-huszar?language=en-US"
+                target="_blank"
+                title="read about actor on MovieDB"
+              >
+                <img
+                  src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/l5gfPIcngMlJ92IuKRjeFv1Dkta.jpg"
+                  alt="Stephen Huszar"
+                  class="cast-img"
+                />
+              </a>
+              <span class="cast-title">Stephen Huszar</span>
+            </div>
+            <div class="cast-box">
+              <a
+                href="https://www.themoviedb.org/person/55775-katie-cassidy?language=en-US"
+                target="_blank"
+                title="read about actor on MovieDB"
+              >
+                <img
+                  src=" https://www.themoviedb.org/t/p/w300_and_h450_bestv2/v7cs7RFcfoiL8W1YRkZK5lBc57H.jpg"
+                  alt="Katie Cassidy"
+                  class="cast-img"
+                />
+              </a>
+              <span class="cast-title">Katie Cassidy</span>
+            </div>
+            <div class="cast-box">
+              <a
+                href="https://www.themoviedb.org/person/1542593-charlie-ebbs?language=en-US"
+                target="_blank"
+                title="read about actor on MovieDB"
+              >
+                <img
+                  src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/weqx8PT0vJODpSPMcrKNzdfH2jc.jpg"
+                  alt="Charlie Ebbs"
+                  class="cast-img"
+                />
+              </a>
+              <span class="cast-title">Charlie Ebbs</span>
+            </div>
+            <div class="cast-box">
+              <a
+                href="https://www.themoviedb.org/person/190905-angela-besharah?language=en-US"
+                target="_blank"
+                title="read about actor on MovieDB"
+              >
+                <img
+                  src=" https://www.themoviedb.org/t/p/w300_and_h450_bestv2/5lY6aCGSRAK6SnMarfyL2W3wiU5.jpg"
+                  alt="Angela Besharah"
+                  class="cast-img"
+                />
+              </a>
+              <span class="cast-title">Angela Besharah</span>
+            </div>
+            <div class="cast-box">
+              <a
+                href="https://www.themoviedb.org/person/2936541-glenn-edward-gyorffy?language=en-US"
+                target="_blank"
+                title="read about actor on MovieDB"
+              >
+                <img
+                  src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/y2GRzoyvgbJsS3HeuymW6ki65T6.jpg "
+                  alt="Glenn Edward Gyorffy"
+                  class="cast-img"
+                />
+              </a>
+              <span class="cast-title">Glenn Edward Gyorffy</span>
+            </div>
+            <div class="cast-box">
+              <a
+                href="https://www.themoviedb.org/person/2563064-norman-mikael-berketa?language=en-US"
+                target="_blank"
+                title="read about actor on MovieDB"
+              >
+                <img
+                  src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/iKlMXYLDJh4yoTMFhD7QhsGfvrr.jpg "
+                  alt="Kathryn Kohut"
+                  class="cast-img"
+                />
+              </a>
+              <span class="cast-title">Kathryn Kohut</span>
+            </div>
+          </div>
+        </div>
+        <!-- Download -->
+        <div class="download">
+          <h2 class="download-title">Download Movie</h2>
+          <div class="download-links">
+            <a
+              href="    https://streamtape.com/v/JXJPGjMXrYTj839/A_Royal_Christmas_Crush_2023.mp4#"
+              target="_blank"
+              download
+              >480p</a
+            >
+            <a
+              href="    https://streamtape.com/v/JXJPGjMXrYTj839/A_Royal_Christmas_Crush_2023.mp4#"
+              target="_blank"
+              download
+              >720p</a
+            >
+            <a
+              href="    https://streamtape.com/v/JXJPGjMXrYTj839/A_Royal_Christmas_Crush_2023.mp4#"
+              target="_blank"
+              download
+              >1080p</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="right-sidebar">
+        <div class="sidebar-title">
+          <h2>Related</h2>
+        </div>
+        <div class="related-movies">
+          <a href="return-to-christmas-creek.html">
+            <div class="movie">
+              <img
+                src="../../assets/img/return-to-christmas-creek.jpg"
+                alt=""
+              />
+              <div class="movie-container">
+                <small>similar</small>
+                <h4>Return To Christmas</h4>
+                <span class="bottom-content">
+                  <p>Movie</p>
+                  <p>1 Eps</p>
+                  <p class="fas fa-bookmark">&nbsp; 57k</p>
+                </span>
+              </div>
+            </div>
+          </a>
+          <a href="little.html">
+            <div class="movie">
+              <img src="../../assets/img/movie-2.jpg" alt="" />
+              <div class="movie-container">
+                <small>similar</small>
+                <h4>Hitman & Bodyguard</h4>
+                <span class="bottom-content">
+                  <p>Movie</p>
+                  <p>1 Eps</p>
+                  <p class="fas fa-bookmark">&nbsp;67k</p>
+                </span>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- Recommended Movies -->
+        <h2 class="download-title">You Might Also Like...</h2>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../../assets/img/IB71.jpg" alt="" />
+              <div class="box-text">
+                <a
+                  href="../../assets/movieplay/IB71.html"
+                  class="watch-btn play-btn"
+                >
+                  <i class="bx bx-right-arrow"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../../assets/img/transporter.jpg" alt="" />
+              <div class="box-text">
+                <a
+                  href="../../assets/movieplay/transporter.html"
+                  class="watch-btn play-btn"
+                >
+                  <i class="bx bx-right-arrow"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../../assets/img/movie-3.jpg" alt="" />
+              <div class="box-text">
+                <a
+                  href="../../assets/movieplay/Shang-chi.html"
+                  class="watch-btn play-btn"
+                >
+                  <i class="bx bx-right-arrow"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../../assets/img/movie-4.jpg" alt="" />
+              <div class="box-text">
+                <a
+                  href="../../assets/movieplay/Eternals.html"
+                  class="watch-btn play-btn"
+                >
+                  <i class="bx bx-right-arrow"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../../assets/img/crush-christmas.jpg" alt="" />
+              <div class="box-text">
+                <a
+                  href="../../assets/movieplay/a-royal-christmas-crush.html"
+                  class="watch-btn play-btn"
+                >
+                  <i class="bx bx-right-arrow"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../../assets/img/movie-5.jpg" alt="" />
+              <div class="box-text">
+                <a
+                  href="../../assets/movieplay/Spectre.html"
+                  class="watch-btn play-btn"
+                >
+                  <i class="bx bx-right-arrow"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../../assets/img/movie-7.jpg" alt="" />
+              <div class="box-text">
+                <a
+                  href="../../assets/movieplay/Wolverine.html"
+                  class="watch-btn play-btn"
+                >
+                  <i class="bx bx-right-arrow"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../../assets/img/movie-8.jpg" alt="" />
+              <div class="box-text">
+                <a
+                  href="../../assets/movieplay/johnny-english.html"
+                  class="watch-btn play-btn"
+                >
+                  <i class="bx bx-right-arrow"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../../assets/img/A_Quiet_Place.jpg" alt="" />
+              <div class="box-text">
+                <a
+                  href="../../assets/movieplay/quite-place.html"
+                  class="watch-btn play-btn"
+                >
+                  <i class="bx bx-right-arrow"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <noscript
+          >Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript"
+            >comments powered by Disqus.</a
+          ></noscript
+        >
+
+        <button id="scrollToTopButton" title="Go to top">
+          <i class="fa fa-angles-up" style="font-weight: bolder"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Adding Disqus -->
+
+    <!-- Place the Disqus thread div at the bottom of the page -->
+    <div class="comment-section container">
+      <h2 class="comment-head">
+        <i class="bx bxs-star star"></i>
+        Comment Section
+      </h2>
+      <div id="disqus_thread"></div>
+    </div>
+
+    <script>
+      // Get the current URL
+      var currentURL = window.location.href;
+
+      // Extract the fragment identifier
+      var fragmentIdentifier = currentURL.split("#")[1];
+
+      // Check if a fragment identifier exists
+      if (fragmentIdentifier) {
+        // Remove the "ep" prefix and get only the numeric part
+        var numericPart = fragmentIdentifier.replace("ep", "");
+
+        // Construct the new episode URL by concatenating the numeric part
+        var newEpisodeURL = `https://vidsrc.to/embed/tv/tt1312171/1/${numericPart}`;
+
+        // Set the new URL as the iframe src
+        document.getElementById("video-iframe").src = newEpisodeURL;
+      } else {
+        console.log("No Fragment Identifier found.");
+      }
+
+      // Function to change the background color of a button and store it in local storage
+      function changeButtonColor(episodeNumber, color) {
+        var episodeButton = document.querySelector(
+          `.episode-btn[data-episode="${episodeNumber}"]`
+        );
+        if (episodeButton) {
+          episodeButton.style.backgroundColor = color;
+          localStorage.setItem(`episode${episodeNumber}ButtonColor`, color); // Store the color in local storage
+        }
+      }
+
+      // Restore the background colors of watched episodes from local storage
+      for (var episodeNumber = 1; episodeNumber <= 10; episodeNumber++) {
+        var storedColor = localStorage.getItem(
+          `episode${episodeNumber}ButtonColor`
+        );
+        if (storedColor) {
+          changeButtonColor(episodeNumber, storedColor);
+        }
+      }
+    </script>
+    <script>
+      const videoIframe = document.getElementById("video-iframe");
+      const seriesName = "The-umbrella-academy/the-umbrella-academy-s1";
+
+      function changeEpisode(seriesId, seasonNumber, episodeNumber) {
+        // Construct the new episode URL
+        const apiUrl = `https://vidsrc.to/embed/tv/${seriesId}/${seasonNumber}/${episodeNumber}`;
+
+        // Update the iframe src with the new video URL
+        $("#video-iframe").attr("src", apiUrl);
+
+        const newUri = `http://127.0.0.1:5500/watch/${seriesName}-s${seasonNumber}.html#ep${episodeNumber}`;
+
+        history.replaceState({}, "", newUri);
+      }
+    </script>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = "Fan2one";
+      var disqus_identifier = "newid1";
+      var disqus_url =
+        "http://rseann.helioho.st/watch/The-Umbrella-academy/the-umbrella-academy-s1.html";
+      var disqus_config = function () {
+        this.language = "en";
+      };
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function () {
+        var dsq = document.createElement("script");
+        dsq.type = "text/javascript";
+        dsq.async = true;
+        dsq.src = "http://" + disqus_shortname + ".disqus.com/embed.js";
+        (
+          document.getElementsByTagName("head")[0] ||
+          document.getElementsByTagName("body")[0]
+        ).appendChild(dsq);
+      })();
+
+      /* * * Disqus Reset Function * * */
+      var reset = function (newIdentifier, newUrl, newTitle, newLanguage) {
+        DISQUS.reset({
+          reload: true,
+          config: function () {
+            this.page.identifier = newIdentifier;
+            this.page.url = newUrl;
+            this.page.title = newTitle;
+            this.language = newLanguage;
+          },
+        });
+      };
+    </script>
+    <!-- Copyright  -->
+    <div class="copyright">&#169; Godak All rights Reserved</div>
+    <!-- Link Swiper  Js -->
+    <script src="../../assets/js/series.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="../swiperjs/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "cards",
+        grabCursor: true,
+        loop: true,
+      });
+    </script>
+    <script>
+      // Get all episode buttons
+      const episodeButtons = document.querySelectorAll(".episode-btn");
+
+      // Add click event listeners to each button
+      episodeButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          // Change the color when clicked
+          button.style.backgroundColor = "#5a2e98"; // You can change the color to your preference
+        });
+      });
+    </script>
+    <script
+      id="dsq-count-scr"
+      src="//fan2one.disqus.com/count.js"
+      async
+    ></script>
+  </body>
+</html>

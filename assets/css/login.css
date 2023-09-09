@@ -1,0 +1,261 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.85)),
+    url("../img/background3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#scrollToTopButton {
+  position: fixed;
+  bottom: 40px;
+  right: 25px;
+  font-size: 25px;
+  z-index: 99;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  color: black;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 6px;
+  border-radius: 50%;
+  box-shadow: 0 6px 10px 0px gray;
+}
+
+#scrollToTopButton:hover,
+#scrollToTopButton i:hover {
+  color: red;
+  background-color: white;
+}
+h1 {
+  margin: auto;
+  width: max-content;
+  color: white;
+}
+span {
+  display: inline-block;
+}
+.img-logo {
+  height: 94px;
+  margin-left: 45px;
+}
+.container {
+  max-width: 100%;
+  width: 350px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.container input[type="text"],
+.container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 3px;
+  border: 1px solid #333;
+}
+.container input[type="password"] {
+  margin-top: 20px;
+}
+
+.container input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 13px;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+
+.container input[type="submit"]:hover {
+  background-color: rgb(177, 18, 18);
+}
+
+.container input {
+  width: 100%;
+  height: 45px;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  outline: transparent;
+  text-indent: 18px;
+}
+
+.container input::-webkit-input-placeholder {
+  font-size: 1rem;
+  color: #bdc7c9;
+}
+
+.container input::-moz-placeholder {
+  font-size: 1rem;
+  color: #bdc7c9;
+  text-indent: 40px;
+}
+
+.or {
+  margin-bottom: 5px;
+  text-align: center;
+  color: #bdc7c9;
+  margin-top: 10px;
+}
+
+/* google sigin button */
+#googleSignInButton {
+  width: 100%;
+  height: auto;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+/* help */
+.help a {
+  color: #bdc7c9;
+  text-decoration: none;
+  padding-top: 10%;
+  margin-left: 64%;
+  text-align: right;
+}
+.help a:hover {
+  text-decoration: underline;
+}
+
+.seperator {
+  width: 100%;
+  border: 1px solid #ccc;
+  color: red !important;
+}
+
+.new-members {
+  margin-top: 20px;
+  display: flex;
+  margin-bottom: 10px;
+  color: #bdc7c9;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.signup-link {
+  color: white;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+.protection {
+  margin: auto;
+  font-size: 0.8rem;
+  color: #bdc7c9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-weight: 400;
+}
+
+.protection a {
+  text-decoration: none;
+}
+
+.protection a:hover {
+  text-decoration: underline;
+}
+
+.learnmore {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-left: -30%;
+  padding: 0;
+}
+.learnmore a {
+  color: blue;
+}
+/* Help Section */
+.bottom {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #bdc7c9;
+}
+.tel-link {
+  text-decoration: none;
+  color: #e1e5ea;
+}
+
+.tel-link:hover {
+  text-decoration: underline;
+}
+
+.bottom-width {
+  max-width: 100%;
+  padding: 8px 20px;
+  margin: auto;
+}
+
+.bottom-flex {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 0 0 0;
+  justify-content: center;
+}
+
+.bottom-flex li {
+  list-style: none;
+  margin: 0px 10px;
+}
+.bottom-flex li a {
+  font-size: 15px;
+}
+.list-bottom {
+  /* width: 25%; */
+  margin-top: 10px;
+}
+
+.link-bottom {
+  text-decoration: none;
+  color: #bdc7c9;
+  font-size: 0.8rem;
+}
+
+.link-bottom:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: red;
+}
