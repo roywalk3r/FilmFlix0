@@ -353,7 +353,7 @@
 img {
   transition: filter 0.6s ease;
 }
-img:hover {
+.seasons .card img:hover {
   filter: grayscale(100%);
 }
 .episode-button.clicked {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!-- Title and Meta Description -->
     <title>FilmFlix | Home Of Movies</title>
@@ -16,8 +17,10 @@
     <meta
       name="keywords"
       content="movies, rseann, film, entertainment, watch movies,watch movies on filmflix, film streaming, FilmFlix, filmflix,movie,streaming ,filmflix streaming"
-      ,
+      
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 
     <!-- Structured Data using Schema.org -->
     <script type="application/ld+json">
@@ -87,6 +90,11 @@
         bottom: 0.8rem !important;
         right: 11.4rem !important;
       }
+      .login{
+        background-color:transparent !important;
+        cursor: pointer;
+        font-size:20px;
+      }
     </style>
     <style>
     .user {
@@ -101,7 +109,7 @@
       <!-- Nav  -->
       <div class="nav container">
         <!-- logo -->
-        <a href="home.html" class="logo"> Film<span>Flix</span> </a>
+        <a href="home.php" class="logo"> Film<span>Flix</span> </a>
         <!-- Search Box -->
         <div class="search-box">
           <input type="search" id="search-input" placeholder="Search movie" />
@@ -143,7 +151,7 @@ if (isset($_SESSION['username'])) {
 
 <?php if (!$username) { ?>
         <!-- Display the "Login" button if the user is not logged in -->
-        <button type="button" class="login" id="loginButton">Login</button>
+        <i   class="login fa-solid fa-right-to-bracket" id="loginButton"></i>
     <?php } ?>
 
 
@@ -261,6 +269,26 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="newmember"><a href="#">Not a member? Sign Up</a></div>
         </form>
 
+        <script>
+    window.onload = function () {
+        // JavaScript code to handle the CAPTCHA check on form submission
+        document.getElementById('logform').addEventListener('submit', function (event) {
+            var response = grecaptcha.getResponse();
+
+            if (response.length === 0) {
+                // CAPTCHA not completed, show SweetAlert and prevent form submission
+                Swal.fire({
+                   
+                    title: 'Oops...',
+                    text: 'Please complete the CAPTCHA!',
+                    width:'fit-content',
+                    height:'40px'
+                });
+                event.preventDefault();
+            }
+        });
+    };
+</script>
         <div>
           <p class="acnot"></p>
         </div>
@@ -313,10 +341,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       if ($conn->query($sql) === TRUE) {
           // Registration successful
-          echo '<p id="errorText" style="color: green">Registration successful.</p>';
+          echo '<p  class="reg-com" style="color: green">Registration successful.</p>';
       } else {
           // Error while registering
-          echo '<p id="errorText" style="color: red">Error while registering.</p>';
+          echo '<p class="reg-com" style="color: red">Error while registering.</p>';
       }
   }
 }
@@ -432,6 +460,53 @@ $conn->close();
         </div>
       </div>
     </section>
+<!-- Add this section where you want to display the latest movies -->
+<section class="popular container" id="popular">
+    <!-- Heading -->
+    <div class="heading">
+        <h2 class="heading-title">Recently Added</h2>
+    </div>
+    <!-- Content -->
+    <div class="popular-content swiper">
+        <div class="swiper-wrapper" id="latestMoviesContainer"></div>
+    </div>
+</section>
+
+<!-- Add this script at the end of your home.php file -->
+<script>
+    // Fetch latest movies from the server
+    fetch('get_movies.php')
+        .then(response => response.json())
+        .then(movies => {
+            const latestMoviesContainer = document.getElementById('latestMoviesContainer');
+
+            // Create movie cards dynamically
+            movies.forEach(movie => {
+                const movieCard = `
+                    <div class="swiper-slide">
+                        <div class="movie-box">
+                            <img src="${movie.thumbnail_url}" alt="${movie.title}" class="movie-box-img"/>
+                            <div class="box-text">
+                                <h2 class="movie-title">${movie.title}</h2>
+                                <span class="movie-type">${movie.genre}</span>
+                                <a href="assets/movieplay/${sanitizeFileName(movie.title)}.php" class="watch-btn play-btn">
+                                    <i class="bx bx-right-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                latestMoviesContainer.innerHTML += movieCard;
+            });
+        })
+        .catch(error => console.error('Error fetching latest movies:', error));
+
+    // Function to sanitize a string for use as a file name
+    function sanitizeFileName(filename) {
+        return filename.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase();
+    }
+</script>
 
     <!-- Latest Movies -->
     <section class="popular container" id="popular">
@@ -452,12 +527,12 @@ $conn->close();
                 src="assets/img/blue-beetle.jpg"
                 alt="spiderman"
                 class="movie-box-img"
-              />
+              /> 
               <div class="box-text">
                 <h2 class="movie-title">Blue Beetle</h2>
                 <span class="movie-type">SCI-FI</span>
                 <a
-                  href="./assets/movieplay/The_Tomorrow_Job.html"
+                  href="./assets/movieplay/The_Tomorrow_Job.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -477,7 +552,7 @@ $conn->close();
                 <h2 class="movie-title">The Tomorrow Job</h2>
                 <span class="movie-type">Action</span>
                 <a
-                  href="./assets/movieplay/The_Tomorrow_Job.html"
+                  href="./assets/movieplay/The_Tomorrow_Job.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -498,7 +573,7 @@ $conn->close();
                 <h2 class="movie-title">No Hard Feelinga</h2>
                 <span class="movie-type">Comedy/Drama</span>
                 <a
-                  href="assets/movieplay/nohardfeelings.html"
+                  href="assets/movieplay/nohardfeelings.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -518,7 +593,7 @@ $conn->close();
                 <h2 class="movie-title">Trapped in the Farm House</h2>
                 <span class="movie-type">Horror/Mystery</span>
                 <a
-                  href="assets/movieplay/trappedinthefarmhouse.html"
+                  href="assets/movieplay/trappedinthefarmhouse.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -538,7 +613,7 @@ $conn->close();
                 <h2 class="movie-title">Hitmen</h2>
                 <span class="movie-type">Action/Adeventure</span>
                 <a
-                  href="assets/movieplay/Hitmen.html"
+                  href="assets/movieplay/Hitmen.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -558,7 +633,7 @@ $conn->close();
                 <h2 class="movie-title">Spider-Man: Across the Spider-Verse</h2>
                 <span class="movie-type">Action/Animation</span>
                 <a
-                  href="assets/movieplay/acrosstheverse.html"
+                  href="assets/movieplay/acrosstheverse.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -578,7 +653,7 @@ $conn->close();
                 <h2 class="movie-title">Insidious: The Red Door</h2>
                 <span class="movie-type">Action/Horror</span>
                 <a
-                  href="assets/movieplay/red-door.html"
+                  href="assets/movieplay/red-door.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -598,7 +673,7 @@ $conn->close();
                 <h2 class="movie-title">Transformers</h2>
                 <span class="movie-type">Action/Sci-fi</span>
                 <a
-                  href="assets/movieplay/transformers.html"
+                  href="assets/movieplay/transformers.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -618,7 +693,7 @@ $conn->close();
                 <h2 class="movie-title">John Wick: Chapter 4</h2>
                 <span class="movie-type">Action/Thriller</span>
                 <a
-                  href="assets/movieplay/John-Wick-4.html"
+                  href="assets/movieplay/John-Wick-4.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -645,7 +720,7 @@ $conn->close();
           <div class="box-text">
             <h2 class="movie-title">Jumanji: Welcome to The jungle</h2>
             <span class="movie-type">Action</span>
-            <a href="assets/movieplay/jumanji.html" class="watch-btn play-btn">
+            <a href="assets/movieplay/jumanji.php" class="watch-btn play-btn">
               <i class="bx bx-right-arrow"></i>
             </a>
           </div>
@@ -656,7 +731,7 @@ $conn->close();
           <div class="box-text">
             <h2 class="movie-title">Hitman's Wife Bodyguard</h2>
             <span class="movie-type">Action/Comedy</span>
-            <a href="assets/movieplay/hitman2.html" class="watch-btn play-btn">
+            <a href="assets/movieplay/hitman2.php" class="watch-btn play-btn">
               <i class="bx bx-right-arrow"></i>
             </a>
           </div>
@@ -668,7 +743,7 @@ $conn->close();
             <h2 class="movie-title">Shang-Chi</h2>
             <span class="movie-type">Action</span>
             <a
-              href="assets/movieplay/Shang-chi.html"
+              href="assets/movieplay/Shang-chi.php"
               class="watch-btn play-btn"
             >
               <i class="bx bx-right-arrow"></i>
@@ -681,7 +756,7 @@ $conn->close();
           <div class="box-text">
             <h2 class="movie-title">Eternals</h2>
             <span class="movie-type">Action/Sci-Fi</span>
-            <a href="assets/movieplay/Eternals.html" class="watch-btn play-btn">
+            <a href="assets/movieplay/Eternals.php" class="watch-btn play-btn">
               <i class="bx bx-right-arrow"></i>
             </a>
           </div>
@@ -692,7 +767,7 @@ $conn->close();
           <div class="box-text">
             <h2 class="movie-title">Spectre</h2>
             <span class="movie-type">Action</span>
-            <a href="assets/movieplay/Spectre.html" class="watch-btn play-btn">
+            <a href="assets/movieplay/Spectre.php" class="watch-btn play-btn">
               <i class="bx bx-right-arrow"></i>
             </a>
           </div>
@@ -704,7 +779,7 @@ $conn->close();
             <h2 class="movie-title">The old Guard</h2>
             <span class="movie-type">Action/Historical</span>
             <a
-              href="assets/movieplay/Old-Guard.html"
+              href="assets/movieplay/Old-Guard.php"
               class="watch-btn play-btn"
             >
               <i class="bx bx-right-arrow"></i>
@@ -718,7 +793,7 @@ $conn->close();
             <h2 class="movie-title">The Wolverine</h2>
             <span class="movie-type">Action/Sci-Fi</span>
             <a
-              href="assets/movieplay/Wolverine.html"
+              href="assets/movieplay/Wolverine.php"
               class="watch-btn play-btn"
             >
               <i class="bx bx-right-arrow"></i>
@@ -736,7 +811,7 @@ $conn->close();
             <h2 class="movie-title">Johnny English</h2>
             <span class="movie-type">Action/Comedy</span>
             <a
-              href="assets/movieplay/johnny-english.html"
+              href="assets/movieplay/johnny-english.php"
               class="watch-btn play-btn"
             >
               <i class="bx bx-right-arrow"></i>
@@ -771,7 +846,7 @@ $conn->close();
                 <h2 class="movie-title">Spider Man: No Way Home</h2>
                 <span class="movie-type">Action</span>
                 <a
-                  href="./assets/movieplay/spiderman.html"
+                  href="./assets/movieplay/spiderman.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -792,7 +867,7 @@ $conn->close();
                 <h2 class="movie-title">Jungle Cruise</h2>
                 <span class="movie-type">Action/Adventure</span>
                 <a
-                  href="assets/movieplay/Jungle-Cruise.html"
+                  href="assets/movieplay/Jungle-Cruise.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -812,7 +887,7 @@ $conn->close();
                 <h2 class="movie-title">Black Panther: Wakanda Forever</h2>
                 <span class="movie-type">Action/Sci-Fi</span>
                 <a
-                  href="assets/movieplay/Wakanda.html"
+                  href="assets/movieplay/Wakanda.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -832,7 +907,7 @@ $conn->close();
                 <h2 class="movie-title">Hitman Bodyguard</h2>
                 <span class="movie-type">Action/Drama</span>
                 <a
-                  href="assets/movieplay/hitman.html"
+                  href="assets/movieplay/hitman.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -847,7 +922,7 @@ $conn->close();
               <div class="box-text">
                 <h2 class="movie-title">Lucy</h2>
                 <span class="movie-type">Action/Sci-Fi</span>
-                <a href="assets/movieplay/Lucy.html" class="watch-btn play-btn">
+                <a href="assets/movieplay/Lucy.php" class="watch-btn play-btn">
                   <i class="bx bx-right-arrow"></i>
                 </a>
               </div>
@@ -865,7 +940,7 @@ $conn->close();
                 <h2 class="movie-title">Gretel And Hansel</h2>
                 <span class="movie-type">Action/Horror</span>
                 <a
-                  href="assets/movieplay/gretel_hansel.html"
+                  href="assets/movieplay/gretel_hansel.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -885,7 +960,7 @@ $conn->close();
                 <h2 class="movie-title">Extraction</h2>
                 <span class="movie-type">Action</span>
                 <a
-                  href="assets/movieplay/extraction.html"
+                  href="assets/movieplay/extraction.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -907,7 +982,7 @@ $conn->close();
                 </h2>
                 <span class="movie-type">Sports</span>
                 <a
-                  href="assets/movieplay/love-of-game.html"
+                  href="assets/movieplay/love-of-game.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -934,7 +1009,7 @@ $conn->close();
           <div class="box-text">
             <h2 class="movie-title">IB71</h2>
             <span class="movie-type">Action/Politics</span>
-            <a href="assets/movieplay/IB71.html" class="watch-btn play-btn">
+            <a href="assets/movieplay/IB71.php" class="watch-btn play-btn">
               <i class="bx bx-right-arrow"></i>
             </a>
           </div>
@@ -950,7 +1025,7 @@ $conn->close();
             <h2 class="movie-title">The Viking War</h2>
             <span class="movie-type">Action</span>
             <a
-              href="assets/movieplay/the-viking-war.html"
+              href="assets/movieplay/the-viking-war.php"
               class="watch-btn play-btn"
             >
               <i class="bx bx-right-arrow"></i>
@@ -964,7 +1039,7 @@ $conn->close();
             <h2 class="movie-title">Transporter 2002</h2>
             <span class="movie-type">Action</span>
             <a
-              href="assets/movieplay/transporter.html"
+              href="assets/movieplay/transporter.php"
               class="watch-btn play-btn"
             >
               <i class="bx bx-right-arrow"></i>
@@ -978,7 +1053,7 @@ $conn->close();
             <h2 class="movie-title">A quite Place</h2>
             <span class="movie-type">Action/Horror</span>
             <a
-              href="assets/movieplay/quite-place.html"
+              href="assets/movieplay/quite-place.php"
               class="watch-btn play-btn"
             >
               <i class="bx bx-right-arrow"></i>
@@ -996,7 +1071,7 @@ $conn->close();
             <h2 class="movie-title">A Royal Christmas Crush</h2>
             <span class="movie-type">Romance/Comedy</span>
             <a
-              href="assets/movieplay/a-royal-christmas-crush.html"
+              href="assets/movieplay/a-royal-christmas-crush.php"
               class="watch-btn play-btn"
             >
               <i class="bx bx-right-arrow"></i>
@@ -1014,7 +1089,7 @@ $conn->close();
             <h2 class="movie-title">Iron Mask</h2>
             <span class="movie-type">Action/Kun-Fu</span>
             <a
-              href="assets/movieplay/iron-mask.html"
+              href="assets/movieplay/iron-mask.php"
               class="watch-btn play-btn"
             >
               <i class="bx bx-right-arrow"></i>
@@ -1032,7 +1107,7 @@ $conn->close();
             <h2 class="movie-title">Spiderman Far From Home</h2>
             <span class="movie-type">Action/Sci-Fi</span>
             <a
-              href="assets/movieplay/spiderman-far.html"
+              href="assets/movieplay/spiderman-far.php"
               class="watch-btn play-btn"
             >
               <i class="bx bx-right-arrow"></i>
@@ -1050,7 +1125,7 @@ $conn->close();
             <h2 class="movie-title">Shanghai Fortress</h2>
             <span class="movie-type">Action/Sci-Fi</span>
             <a
-              href="assets/movieplay/shanghai-fortress.html"
+              href="assets/movieplay/shanghai-fortress.php"
               class="watch-btn play-btn"
             >
               <i class="bx bx-right-arrow"></i>
@@ -1086,7 +1161,7 @@ $conn->close();
                 <h2 class="movie-title">I Spit on Your Grave 2</h2>
                 <span class="movie-type">Horror/Action</span>
                 <a
-                  href="assets\movieplay\ispitonyourgrave.html"
+                  href="assets\movieplay\ispitonyourgrave.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -1107,7 +1182,7 @@ $conn->close();
                 <h2 class="movie-title">Wrong Turn</h2>
                 <span class="movie-type">Horro/Adventure</span>
                 <a
-                  href="assets/movieplay/Wrongturn.html"
+                  href="assets/movieplay/Wrongturn.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -1127,7 +1202,7 @@ $conn->close();
                 <h2 class="movie-title">The Punisher</h2>
                 <span class="movie-type">Action/Horror</span>
                 <a
-                  href="assets/movieplay/punisher.html"
+                  href="assets/movieplay/punisher.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -1147,7 +1222,7 @@ $conn->close();
                 <h2 class="movie-title">It Follows</h2>
                 <span class="movie-type">Horror/Action</span>
                 <a
-                  href="assets/movieplay/It_Follows.html"
+                  href="assets/movieplay/It_Follows.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -1167,7 +1242,7 @@ $conn->close();
                 <h2 class="movie-title">Childs Play3</h2>
                 <span class="movie-type">Horror</span>
                 <a
-                  href="assets/movieplay/Childsplay3.html"
+                  href="assets/movieplay/Childsplay3.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -1187,7 +1262,7 @@ $conn->close();
                 <h2 class="movie-title">Resident Evil</h2>
                 <span class="movie-type">Horror/Action</span>
                 <a
-                  href="assets/movieplay/resident-evil.html"
+                  href="assets/movieplay/resident-evil.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -1207,7 +1282,7 @@ $conn->close();
                 <h2 class="movie-title">Halloween</h2>
                 <span class="movie-type">Horror</span>
                 <a
-                  href="assets/movieplay/Halloween.html"
+                  href="assets/movieplay/Halloween.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -1227,7 +1302,7 @@ $conn->close();
                 <h2 class="movie-title">Trapped in the Farm House</h2>
                 <span class="movie-type">Horror/Mystery</span>
                 <a
-                  href="assets/movieplay/trappedinthefarmhouse.html"
+                  href="assets/movieplay/trappedinthefarmhouse.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -1260,7 +1335,7 @@ $conn->close();
                 <h2 class="movie-title">Little</h2>
                 <span class="movie-type">Comedy/Drama</span>
                 <a
-                  href="assets\movieplay/little.html"
+                  href="assets\movieplay/little.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -1281,7 +1356,7 @@ $conn->close();
                 <h2 class="movie-title">Deadpool</h2>
                 <span class="movie-type">Comedy/Action</span>
                 <a
-                  href="assets/movieplay/Deadpool.html"
+                  href="assets/movieplay/Deadpool.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -1301,7 +1376,7 @@ $conn->close();
                 <h2 class="movie-title">Suicide Squad</h2>
                 <span class="movie-type">Commedy/Action</span>
                 <a
-                  href="assets/movieplay/suicide-squad.html"
+                  href="assets/movieplay/suicide-squad.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -1321,7 +1396,7 @@ $conn->close();
                 <h2 class="movie-title">Horrible Bosses</h2>
                 <span class="movie-type">Comedy/Drama</span>
                 <a
-                  href="assets/movieplay/horriblebosses1.html"
+                  href="assets/movieplay/horriblebosses1.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -1341,7 +1416,7 @@ $conn->close();
                 <h2 class="movie-title">Horrible Bosses 2</h2>
                 <span class="movie-type">Comedy/Drama</span>
                 <a
-                  href="assets/movieplay/horriblebosses.html"
+                  href="assets/movieplay/horriblebosses.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -1361,7 +1436,7 @@ $conn->close();
                 <h2 class="movie-title">No Hard Feelings</h2>
                 <span class="movie-type">Comedy/Drama</span>
                 <a
-                  href="assets/movieplay/nohardfeelings.html"
+                  href="assets/movieplay/nohardfeelings.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -1377,7 +1452,7 @@ $conn->close();
                 <h2 class="movie-title">Paul Blat Mall Cop 2</h2>
                 <span class="movie-type">Comedy/Drama</span>
                 <a
-                  href="assets/movieplay/mall_cop2.html"
+                  href="assets/movieplay/mall_cop2.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -1397,7 +1472,7 @@ $conn->close();
                 <h2 class="movie-title">Ride Along 2</h2>
                 <span class="movie-type">Action/Comedy</span>
                 <a
-                  href="assets/movieplay/ridealong.html"
+                  href="assets/movieplay/ridealong.php"
                   class="watch-btn play-btn"
                 >
                   <i class="bx bx-right-arrow"></i>
@@ -1507,7 +1582,7 @@ closeButton.addEventListener("click", function () {
 });
 
 </script>
-<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 $(document).ready(function() {
     $("#logoutButton").click(function() {
@@ -1541,6 +1616,12 @@ $(document).ready(function() {
         <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
     <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    
+
+    <!-- <script src="assets/js/login.js"></script> -->
     <!-- fontawesome -->
     <script src="assets/fontawesome-free-6.4.0-web/js/fontawesome.min.js"></script>
   </body>

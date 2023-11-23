@@ -32,14 +32,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($loginPassword, $hashed_password)) {
             // Passwords match, successful login
             $_SESSION['username'] = $loginUsername; // Store user data in session
-            header("Location: profile.php"); // Redirect to the profile page
+
+            // Redirect back to the previous page or to a default page if 'return_to' is not set
+            $redirect_url = isset($_SESSION['return_to']) ? $_SESSION['return_to'] : 'profile.php';
+            header("Location: $redirect_url");
             exit;
         }
     }
 
-    // Combination not found or passwords do not match, display an error message
-    echo '<p style="color: red">Could not find username and password combination.</p>';
+    // Combination not found or passwords do not match, display a generic error message
+    echo '<p style="color: red">Invalid username or password.</p>';
+    echo '<a href="home.php">Click here to try again</a>';
 }
+
+// Store the current page URL in a session variable
+$_SESSION['return_to'] = $_SERVER['REQUEST_URI'];
 
 // Close the database connection
 $conn->close();

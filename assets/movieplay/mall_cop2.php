@@ -1,102 +1,3 @@
-<?php
-// Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "movies";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-// Get movie ID from the URL
-if (isset($_GET['id'])) {
-  $movie_id = $_GET['id'];
-
-  // Retrieve movie details based on ID
-  $sql = "SELECT * FROM movie WHERE id = $movie_id";
-  $result = $conn->query($sql);
-  if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-    $title = $row['title'];
-    $description = $row['description'];
-    $release_date = $row['release_date'];
-    $genre = $row['genre'];
-    $director = $row['director'];
-    $poster_url = $row['poster_url'];
-    $thumbnail_url = $row['thumbnail_url']; // Retrieve new field
-    $cast1_name = $row['cast1_name']; // Retrieve new field
-    $cast1_img_url = $row['cast1_img_url']; // Retrieve new field
-    $cast2_name = $row['cast2_name']; // Retrieve new field
-    $cast2_img_url = $row['cast2_img_url']; // Retrieve new field
-    $cast3_name = $row['cast3_name']; // Retrieve new field
-    $cast3_img_url = $row['cast3_img_url']; // Retrieve new field
-    $cast4_name = $row['cast4_name']; // Retrieve new field
-    $cast4_img_url = $row['cast4_img_url']; // Retrieve new field
-    $cast5_name = $row['cast5_name']; // Retrieve new field
-    $cast5_img_url = $row['cast5_img_url']; // Retrieve new field
-    $cast6_name = $row['cast6_name']; // Retrieve new field
-    $cast6_img_url = $row['cast6_img_url']; // Retrieve new field
-    $video_url = $row['video_url'];
-    $download_link1 = $row['download_link1']; // Retrieve new field
-    $download_link2 = $row['download_link2']; // Retrieve new field
-    $download_link3 = $row['download_link3']; // Retrieve new field
-    
-    // Arrangement for related movies
-    $related1_name = $row['related1_name']; // Retrieve new field
-    $related1_genre = $row['related1_genre']; // Retrieve new field
-    $related1_img_url = $row['related1_img_url']; // Retrieve new field
-    $related1_movie_url = $row['related1_movie_url']; // Retrieve new field
-
-    $related2_name = $row['related2_name']; // Retrieve new field
-    $related2_genre = $row['related2_genre']; // Retrieve new field
-    $related2_img_url = $row['related2_img_url']; // Retrieve new field
-    $related2_movie_url = $row['related2_movie_url']; // Retrieve new field
-
-    $related3_name = $row['related3_name']; // Retrieve new field
-    $related3_genre = $row['related3_genre']; // Retrieve new field
-    $related3_img_url = $row['related3_img_url']; // Retrieve new field
-    $related3_movie_url = $row['related3_movie_url']; // Retrieve new field
-    
-    // Arrangement for recommended movies
-    $recommended1_img_url = $row['recommended1_img_url']; // Retrieve new field
-    $recommended1_movie_url = $row['recommended1_movie_url']; // Retrieve new field
-
-    $recommended2_img_url = $row['recommended2_img_url']; // Retrieve new field
-    $recommended2_movie_url = $row['recommended2_movie_url']; // Retrieve new field
-
-    $recommended3_img_url = $row['recommended3_img_url']; // Retrieve new field
-    $recommended3_movie_url = $row['recommended3_movie_url']; // Retrieve new field
-
-    $recommended4_img_url = $row['recommended4_img_url']; // Retrieve new field
-    $recommended4_movie_url = $row['recommended4_movie_url']; // Retrieve new field
-
-    $recommended5_img_url = $row['recommended5_img_url']; // Retrieve new field
-    $recommended5_movie_url = $row['recommended5_movie_url']; // Retrieve new field
-
-    $recommended6_img_url = $row['recommended6_img_url']; // Retrieve new field
-    $recommended6_movie_url = $row['recommended6_movie_url']; // Retrieve new field
-
-    $recommended7_img_url = $row['recommended7_img_url']; // Retrieve new field
-    $recommended7_movie_url = $row['recommended7_movie_url']; // Retrieve new field
-
-    $recommended8_img_url = $row['recommended8_img_url']; // Retrieve new field
-    $recommended8_movie_url = $row['recommended8_movie_url']; // Retrieve new field
-
-    $recommended9_img_url = $row['recommended9_img_url']; // Retrieve new field
-    $recommended9_movie_url = $row['recommended9_movie_url']; // Retrieve new field
-
-  } else {
-      echo "Movie not found.";
-  }
-}
-
-
-
-
-$conn->close();
-?>
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -109,23 +10,26 @@ $conn->close();
       name="description"
       content="Watch the latest and greatest movies on FilmFlix. Your ultimate destination for entertainment."
     />
-
     <!-- Meta Keywords (optional) -->
     <meta
       name="keywords"
       content="movies, film, entertainment, watch movies, film streaming, FilmFlix, filmflix,movie,streaming"
     />
-   
-    <title>Watch: <?php echo $title; ?></title>
-   <!-- Local Links -->
-   <link rel="stylesheet" href="../css/watch.css" />
+    <link
+      rel="canonical"
+      href="https://rseann.helioho.st/assets/movieplay/extraction.html"
+    />
+    <title>Watch: Mall Cop 2 (2015)</title>
+    <!--  Links For Icons ANd Css-->
+    <link rel="stylesheet" href="../css/watch.css" />
     <link rel="stylesheet" href="../swiperjs/swiper-scrollbar-min.css" />
     <link rel="stylesheet" href="../boxicons-2.1.4/css/boxicons.min.css" />
+    <link rel="stylesheet" href="../swiperjs/swiper-bundle.min.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../swiperjs/swiper-bundle.min.css" />
+
     <link
       rel="stylesheet"
       href="../fontawesome-free-6.4.0-web/css/fontawesome.min.css"
@@ -153,10 +57,9 @@ $conn->close();
       }
     </style>
   </head>
-
   <body>
-     <!-- Header -->
-     <header>
+    <!-- Header -->
+      <header>
       <!-- Nav  -->
       <div class="nav container">
         <!-- logo -->
@@ -331,11 +234,11 @@ $password = ""; // Add your database password here
 $dbname = "user_credentials";
 
 // Create a connection
-$conn1 = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check if the connection was successful
-if ($conn1->connect_error) {
-    die("Connection failed: " . $conn1->connect_error);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 
 // Function to safely sanitize user input
@@ -359,7 +262,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // Check if username or email already exist
   $sql = "SELECT * FROM users WHERE username = '$username' OR email = '$email'";
-  $result = $conn1->query($sql);
+  $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
       // Handle existing user error here
@@ -370,7 +273,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       // Insert the user into the database with the current date and time
       $sql = "INSERT INTO users (username, email, password, signup_date) VALUES ('$username', '$email', '$hashed_password', NOW())";
 
-      if ($conn1->query($sql) === TRUE) {
+      if ($conn->query($sql) === TRUE) {
           // Registration successful
           echo '<p  class="reg-com" style="color: green">Registration successful.</p>';
       } else {
@@ -382,7 +285,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Retrieve user data
 $sql = "SELECT * FROM users WHERE username = '$username'";
-$result = $conn1->query($sql);
+$result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
@@ -396,7 +299,7 @@ if ($result->num_rows > 0) {
 
 
 // Close the database connection
-$conn1->close();
+$conn->close();
 ?>
 
 
@@ -455,17 +358,18 @@ $conn1->close();
         </button>
       </div>
     </header>
+
     <!-- Play Movie Container -->
     <div class="section-container body-container">
-    <div class="main-left">
+      <div class="main-left">
         <div class="movie-play">
-        <img
-            src="<?php echo $thumbnail_url; ?>"
+          <img
+            src="https://www.themoviedb.org/t/p/original/oB7WEyvALePlsebGmvohl6XoHgT.jpg"
             alt="thumbnail"
             id="thumbnail"
           />
           <iframe
-            src="<?php echo $video_url; ?>"
+            src="https://vidsrc.to/embed/movie/tt3450650"
             allowfullscreen
             allowtransparency
             allow="autoplay"
@@ -480,27 +384,29 @@ $conn1->close();
           ></i>
         </div>
         <!-- About  -->
-        <div class="about-movie body-container">
+        <div class="about-movie container">
           <div class="sypnosis">
-            <img src="<?php echo $poster_url; ?>" alt="" class="img" />
+            <img src="../img/mall_cop.jpg" alt="movie poster" class="img" />
             <div class="content">
-              <h2><?php echo $title; ?></h2>
-        <!-- <p>Genre: <?php echo $genre; ?></p> -->
-
+              <h2>Paul Blart: Mall Cop 2</h2>
               <div class="req">
-                <span><i class="bx bx-calendar-alt"></i> 2023</span>
-                <span class="age-req"><i>17+</i></span>
-                <span><i class="bx bx-time"></i> 1h 24min</span>
+                <span><i class="bx bx-calendar-alt"></i> 2015</span>
+                <span class="age-req"><i>PG </i></span>
+                <span><i class="bx bx-time"></i> 1h 34min</span>
               </div>
               <p>
-              <?php echo $description; ?>
+                Security guard Paul Blart is headed to Las Vegas to attend a
+                Security Guard Expo with his teenage daughter Maya before she
+                departs for college. While at the convention, he inadvertently
+                discovers a heist - and it's up to Blart to apprehend the
+                criminals.
               </p>
               <span id="release"
-                ><i class="fa fa-calendar"></i> Release date :<?php echo $release_date; ?><sup>th</sup>
-                July 2023</span
-              >
+                ><i class="fa fa-calendar"></i> Release date :17<sup>th</sup>
+                April 2015
+              </span>
               <span id="writer"
-                >Writer <span id="name">: <?php echo $director; ?> </span></span
+                >Writer <span id="name">: Kevin James </span></span
               >
               <div class="rating-card">
                 <div class="rating-content">
@@ -523,49 +429,119 @@ $conn1->close();
               </div>
             </div>
           </div>
-<!-- Movie Cast  -->
-<h2 class="cast-heading">Top Cast</h2>
-<div class="cast">
-    <?php
-    // Assuming you have retrieved the cast information from the database
-    // Replace these with the actual cast information from your database or set them to empty if data is not available
-
-    $cast_members = array(
-        array("name" => $cast1_name, "img_url" => $cast1_img_url),
-        array("name" => $cast2_name, "img_url" => $cast2_img_url),
-        array("name" => $cast3_name, "img_url" => $cast3_img_url),
-        array("name" => $cast4_name, "img_url" => $cast4_img_url),
-        array("name" => $cast5_name, "img_url" => $cast5_img_url),
-        array("name" => $cast6_name, "img_url" => $cast6_img_url)
-    );
-
-    // Loop through each cast member and generate the HTML
-    for ($i = 0; $i < 6; $i++) {
-        $cast_name = $cast_members[$i]["name"];
-        $cast_img_url = $cast_members[$i]["img_url"];
-
-        echo '<div class="cast-box">';
-        echo '<a target="_blank" title="Read about actor on MovieDB">';
-        echo '<img src="' . $cast_img_url . '" alt="' . $cast_name . '" class="cast-img" />';
-        echo '</a>';
-        echo '<span class="cast-title">' . $cast_name . '</span>';
-        echo '</div>';
-    }
-    ?>
-</div>
-
-
+          <!-- Movie Cast  -->
+          <h2 class="cast-heading">Top Cast</h2>
+          <div class="cast">
+            <div class="cast-box">
+              <a
+                href="https://www.themoviedb.org/person/32895-kevin-james?language=en-US"
+                target="_blank"
+                title="read about actor on MovieDB"
+              >
+                <img
+                  src=" https://www.themoviedb.org/t/p/w300_and_h450_bestv2/dqyUARUWykoMT3eRDgy7vmQY5PG.jpg"
+                  alt="Kevin James"
+                  class="cast-img"
+                />
+              </a>
+              <span class="cast-title">Kevin James</span>
+            </div>
+            <div class="cast-box">
+              <a
+                href="https://www.themoviedb.org/person/78436-raini-rodriguez?language=en-US"
+                target="_blank"
+                title="read about actor on MovieDB"
+              >
+                <img
+                  src=" https://www.themoviedb.org/t/p/w300_and_h450_bestv2/pUVCzsJSt5MhkHX82DIz3TED2YN.jpg"
+                  alt="Raini Rodriguez"
+                  class="cast-img"
+                />
+              </a>
+              <span class="cast-title">Raini Rodriguez</span>
+            </div>
+            <div class="cast-box">
+              <a
+                href="https://www.themoviedb.org/person/2203-neal-mcdonough?language=en-US"
+                target="_blank"
+                title="read about actor on MovieDB"
+              >
+                <img
+                  src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/3mI3i1CpjATSCta1Tb2qsyl1KCh.jpg "
+                  alt="Neal McDonough"
+                  class="cast-img"
+                />
+              </a>
+              <span class="cast-title">Neal McDonough</span>
+            </div>
+            <div class="cast-box">
+              <a
+                href="https://www.themoviedb.org/person/59296-daniella-alonso?language=en-US"
+                target="_blank"
+                title="read about actor on MovieDB"
+              >
+                <img
+                  src=" https://www.themoviedb.org/t/p/w300_and_h450_bestv2/ipFtnG5kvkMY1HcLOSFONDIEXqn.jpg"
+                  alt="Daniella Alonso"
+                  class="cast-img"
+                />
+              </a>
+              <span class="cast-title">Daniella Alonso</span>
+            </div>
+            <div class="cast-box">
+              <a
+                href="https://www.themoviedb.org/person/72968-eduardo-ver-stegui?language=en-US"
+                target="_blank"
+                title="read about actor on MovieDB"
+              >
+                <img
+                  src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/jUPrzJbA4ksTR0DYK10PKpq1yJG.jpg "
+                  alt="Eduardo Verástegui"
+                  class="cast-img"
+                />
+              </a>
+              <span class="cast-title">Eduardo Verástegui</span>
+            </div>
+            <div class="cast-box">
+              <a
+                href="https://www.themoviedb.org/person/95136-david-henrie?language=en-US"
+                target="_blank"
+                title="read about actor on MovieDB"
+              >
+                <img
+                  src=" https://www.themoviedb.org/t/p/w300_and_h450_bestv2/1NuD0ltILDRRCMfmLPHM8bSfzhb.jpg"
+                  alt="David Henrie"
+                  class="cast-img"
+                />
+              </a>
+              <span class="cast-title">David Henrie</span>
+            </div>
+          </div>
         </div>
-
-     <!-- Download -->
-<div class="download">
-    <h2 class="download-title">Download Movie</h2>
-    <div class="download-links">
-      <a href=" <?php echo $download_link1; ?>" target="_blank" download="Jumanji">480p</a>
-      <a href=" <?php echo $download_link2; ?>" target="_blank" download>720p</a>
-      <a href=" <?php echo $download_link3; ?>" target="_blank" download>1080p</a>
-  </div>
-</div>
+        <!-- Download -->
+        <div class="download">
+          <h2 class="download-title">Download Movie</h2>
+          <div class="download-links">
+            <a
+              href="https://streamtape.com/v/yjlWYVvloji1rok/Paul_Blart_Mall_Cop_2_%282015%29.mkv.mp4#"
+              target="_blank"
+              download
+              >480p</a
+            >
+            <a
+              href="https://streamtape.com/v/yjlWYVvloji1rok/Paul_Blart_Mall_Cop_2_%282015%29.mkv.mp4#"
+              target="_blank"
+              download
+              >720p</a
+            >
+            <a
+              href="https://streamtape.com/v/yjlWYVvloji1rok/Paul_Blart_Mall_Cop_2_%282015%29.mkv.mp4#"
+              target="_blank"
+              download
+              >1080p</a
+            >
+          </div>
+        </div>
       </div>
 
       <div class="right-sidebar">
@@ -573,165 +549,141 @@ $conn1->close();
           <h2>Related</h2>
         </div>
         <div class="related-movies">
-        <?php if (!empty($related1_name)): ?>
-  <a href="<?php echo $related1_movie_url; ?>">
-    <div class="movie">
-      <img src="<?php echo $related1_img_url; ?>" alt="<?php echo $related1_name; ?>" />
-      <div class="movie-container">
-        <small>similar</small>
-        <h4><?php echo $related1_name; ?></h4>
-        <span class="bottom-content">
-          <p><?php echo $related1_genre; ?></p>
-          <p>1 Eps</p>
-          <p class="fas fa-bookmark">&nbsp; 57k</p>
-        </span>
-      </div>
-    </div>
-  </a>
-<?php endif; ?>
-
-
-<?php if (!empty($related2_name)): ?>
-  <a href="<?php echo $related2_movie_url; ?>">
-    <div class="movie">
-      <img src="<?php echo $related2_img_url; ?>" alt="<?php echo $related2_name; ?>" />
-      <div class="movie-container">
-        <small>similar</small>
-        <h4><?php echo $related2_name; ?></h4>
-        <span class="bottom-content">
-          <p><?php echo $related2_genre; ?></p>
-          <p>1 Eps</p>
-          <p class="fas fa-bookmark">&nbsp; 67k</p>
-        </span>
-      </div>
-    </div>
-  </a>
-<?php endif; ?>
-
-<?php if (!empty($related3_name)): ?>
-  <a href="<?php echo $related3_movie_url; ?>">
-    <div class="movie">
-      <img src="<?php echo $related3_img_url; ?>" alt="<?php echo $related3_name; ?>" />
-      <div class="movie-container">
-        <small>similar</small>
-        <h4><?php echo $related3_name; ?></h4>
-        <span class="bottom-content">
-          <p><?php echo $related3_genre; ?></p>
-          <p>1 Eps</p>
-          <p class="fas fa-bookmark">&nbsp; 87k</p>
-        </span>
-      </div>
-    </div>
-  </a>
-<?php endif; ?>
-
-</div>
-<!-- Recommended Movies -->
-<h2 class="download-title">You Might Also Like...</h2>
-<div class="swiper mySwiper">
-  <div class="swiper-wrapper">
-    <?php if (!empty($recommended1_img_url)): ?>
-      <div class="swiper-slide">
-        <img src="<?php echo $recommended1_img_url; ?>" alt="" />
-        <div class="box-text">
-          <a href="<?php echo $recommended1_movie_url; ?>" class="watch-btn play-btn">
-            <i class="bx bx-right-arrow"></i>
+          <a href="horriblebosses.html">
+            <div class="movie">
+              <img src="../img/horriblebosses.jpg" alt="" />
+              <div class="movie-container">
+                <small>Comedy</small>
+                <h4>Horrible Bosses 1</h4>
+                <span class="bottom-content">
+                  <p>Movie</p>
+                  <p>1 Eps</p>
+                  <p class="fas fa-bookmark">&nbsp;977k</p>
+                </span>
+              </div>
+            </div>
+          </a>
+          <a href="">
+            <div class="movie">
+              <img src="../img/little.jpg" alt="" />
+              <div class="movie-container">
+                <small>Comedy</small>
+                <h4>Little</h4>
+                <span class="bottom-content">
+                  <p>Movie</p>
+                  <p>1 Eps</p>
+                  <p class="fas fa-bookmark">&nbsp;97k</p>
+                </span>
+              </div>
+            </div>
+          </a>
+          <a href="nohardfeelings.html">
+            <div class="movie">
+              <img src="../img/no-hard-feelings.jpg" alt="" />
+              <div class="movie-container">
+                <small>Comedy</small>
+                <h4>No Hard Feelings</h4>
+                <span class="bottom-content">
+                  <p>Movie</p>
+                  <p>1 Eps</p>
+                  <p class="fas fa-bookmark">&nbsp;101k</p>
+                </span>
+              </div>
+            </div>
           </a>
         </div>
-      </div>
-    <?php endif; ?>
-
-    <?php if (!empty($recommended2_img_url)): ?>
-      <div class="swiper-slide">
-        <img src="<?php echo $recommended2_img_url; ?>" alt="" />
-        <div class="box-text">
-          <a href="<?php echo $recommended2_movie_url; ?>" class="watch-btn play-btn">
-            <i class="bx bx-right-arrow"></i>
-          </a>
+        <h2 class="download-title">You Might Also Like...</h2>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../img/movie-1.jpg" alt="" />
+              <div class="box-text">
+                <a href="../movieplay/jumanji.html" class="watch-btn play-btn">
+                  <i class="bx bx-right-arrow"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../img/movie-2.jpg" alt="" />
+              <div class="box-text">
+                <a href="../movieplay/hitman2.html" class="watch-btn play-btn">
+                  <i class="bx bx-right-arrow"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../img/movie-3.jpg" alt="" />
+              <div class="box-text">
+                <a
+                  href="../movieplay/Shang-chi.html"
+                  class="watch-btn play-btn"
+                >
+                  <i class="bx bx-right-arrow"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../img/movie-4.jpg" alt="" />
+              <div class="box-text">
+                <a href="../movieplay/Eternals.html" class="watch-btn play-btn">
+                  <i class="bx bx-right-arrow"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../img/crush-christmas.jpg" alt="" />
+              <div class="box-text">
+                <a
+                  href="../movieplay/a-royal-christmas-crush.html"
+                  class="watch-btn play-btn"
+                >
+                  <i class="bx bx-right-arrow"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../img/movie-5.jpg" alt="" />
+              <div class="box-text">
+                <a href="../movieplay/Spectre.html" class="watch-btn play-btn">
+                  <i class="bx bx-right-arrow"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../img/movie-7.jpg" alt="" />
+              <div class="box-text">
+                <a
+                  href="../movieplay/Wolverine.html"
+                  class="watch-btn play-btn"
+                >
+                  <i class="bx bx-right-arrow"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../img/movie-8.jpg" alt="" />
+              <div class="box-text">
+                <a
+                  href="../movieplay/johnny-english.html"
+                  class="watch-btn play-btn"
+                >
+                  <i class="bx bx-right-arrow"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../img/A_Quiet_Place.jpg" alt="" />
+              <div class="box-text">
+                <a
+                  href="../movieplay/quite-place.html"
+                  class="watch-btn play-btn"
+                >
+                  <i class="bx bx-right-arrow"></i>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    <?php endif; ?>
-
-    <?php if (!empty($recommended3_img_url)): ?>
-      <div class="swiper-slide">
-        <img src="<?php echo $recommended3_img_url; ?>" alt="" />
-        <div class="box-text">
-          <a href="<?php echo $recommended3_movie_url; ?>" class="watch-btn play-btn">
-            <i class="bx bx-right-arrow"></i>
-          </a>
-        </div>
-      </div>
-    <?php endif; ?>
-
-    <?php if (!empty($recommended4_img_url)): ?>
-      <div class="swiper-slide">
-        <img src="<?php echo $recommended4_img_url; ?>" alt="" />
-        <div class="box-text">
-          <a href="<?php echo $recommended4_movie_url; ?>" class="watch-btn play-btn">
-            <i class="bx bx-right-arrow"></i>
-          </a>
-        </div>
-      </div>
-    <?php endif; ?>
-
-    <?php if (!empty($recommended5_img_url)): ?>
-      <div class="swiper-slide">
-        <img src="<?php echo $recommended5_img_url; ?>" alt="" />
-        <div class="box-text">
-          <a href="<?php echo $recommended5_movie_url; ?>" class="watch-btn play-btn">
-            <i class="bx bx-right-arrow"></i>
-          </a>
-        </div>
-      </div>
-    <?php endif; ?>
-
-    <?php if (!empty($recommended6_img_url)): ?>
-      <div class="swiper-slide">
-        <img src="<?php echo $recommended6_img_url; ?>" alt="" />
-        <div class="box-text">
-          <a href="<?php echo $recommended6_movie_url; ?>" class="watch-btn play-btn">
-            <i class="bx bx-right-arrow"></i>
-          </a>
-        </div>
-      </div>
-    <?php endif; ?>
-
-    <?php if (!empty($recommended7_img_url)): ?>
-      <div class="swiper-slide">
-        <img src="<?php echo $recommended7_img_url; ?>" alt="" />
-        <div class="box-text">
-          <a href="<?php echo $recommended7_movie_url; ?>" class="watch-btn play-btn">
-            <i class="bx bx-right-arrow"></i>
-          </a>
-        </div>
-      </div>
-    <?php endif; ?>
-
-    <?php if (!empty($recommended8_img_url)): ?>
-      <div class="swiper-slide">
-        <img src="<?php echo $recommended8_img_url; ?>" alt="" />
-        <div class="box-text">
-          <a href="<?php echo $recommended8_movie_url; ?>" class="watch-btn play-btn">
-            <i class="bx bx-right-arrow"></i>
-          </a>
-        </div>
-      </div>
-    <?php endif; ?>
-
-    <?php if (!empty($recommended9_img_url)): ?>
-      <div class="swiper-slide">
-        <img src="<?php echo $recommended9_img_url; ?>" alt="" />
-        <div class="box-text">
-          <a href="<?php echo $recommended9_movie_url; ?>" class="watch-btn play-btn">
-            <i class="bx bx-right-arrow"></i>
-          </a>
-        </div>
-      </div>
-    <?php endif; ?>
-    
-  </div>
-</div>
-     
 
         <noscript
           >Please enable JavaScript to view the
@@ -756,7 +708,6 @@ $conn1->close();
       <div id="disqus_thread"></div>
     </div>
 
-   
     <!-- Copyright  -->
     <div class="copyright">&#169; Godak All rights Reserved</div>
     <!-- Link Swiper  Js -->

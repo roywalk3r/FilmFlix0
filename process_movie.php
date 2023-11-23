@@ -94,7 +94,7 @@ if (isset($_POST['submit'])) {
         $movie_id = $conn->insert_id;
 
 // Get the movie title for the HTML file name
-$html_file_name = sanitizeFileName($title) . '.html';
+$html_file_name = sanitizeFileName($title) . '.php';
 
 // Specify the directory where you want to save the HTML file
 $directory = 'assets/movieplay/';
@@ -192,8 +192,34 @@ if (!is_dir($directory)) {
 // Create a new HTML file for the movie in the specified directory with the title as the file name
 file_put_contents($html_file_path, $html_content);
 
-echo "Movie added successfully!<br>";
-echo "HTML file created: <a href='$html_file_path'>$html_file_name</a>";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "movies";
+
+// Reopen the connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check if the connection is successful
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Update the database with the pathUrl
+$path_url = $html_file_path; // You might want to modify this based on your needs
+$update_sql = "UPDATE movie SET pathUrl = '$path_url' WHERE id = $movie_id";
+
+// Check if the query is successful
+if ($conn->query($update_sql) === TRUE) {
+    echo "Movie added successfully!<br>";
+    echo "HTML file created: <a href='$html_file_path'>$html_file_name</a>";
+} else {
+    echo "Error updating pathUrl: " . $conn->error;
+}
+
+// Close the connection after all operations are done
+$conn->close();
+
 
         } else {
             echo "Movie added successfully, but unable to create HTML file.";

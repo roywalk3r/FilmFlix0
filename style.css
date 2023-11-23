@@ -182,6 +182,18 @@ label {
   flex-wrap: wrap;
   flex-direction: row;
 }
+.reg-com {
+  font-size: 10px;
+  color: red;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: absolute;
+  left: 60%;
+  top: 80%;
+  bottom: 100%;
+  font-size: 1em;
+}
 .erro-container {
   display: flex;
   justify-content: center;

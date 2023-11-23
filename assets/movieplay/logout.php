@@ -3,7 +3,7 @@ session_start(); // Start the session
 
 // Check if the user is logged in, if not, redirect to the login page
 if (!isset($_SESSION['username'])) {
-    header("Location: index.php"); // Redirect to your login page
+    header("Location: ../../index.php"); // Redirect to your login page
     exit;
 }
 
@@ -14,6 +14,6 @@ session_unset();
 session_destroy();
 
 // Redirect to the login page after logout
-header("Location: index.php");
+header("Location: ../../index.php");
 exit;
 ?>

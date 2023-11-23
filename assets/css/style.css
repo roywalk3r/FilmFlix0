@@ -1295,9 +1295,9 @@ footer {
 .login {
   padding: 4px 10px;
   border-radius: 6px;
-  background: orangered !important;
   color: white;
   justify-self: flex-end;
+  background: transparent !important;
 }
 
 .logform {
