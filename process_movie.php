@@ -109,7 +109,7 @@ $html_file_path = $directory . $html_file_name;
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
             $title = $row['title'];
-            $description = $row['description'];
+            $description = mysqli_real_escape_string($conn, $row['description']);
             $release_date = $row['release_date'];
             $genre = $row['genre'];
             $director = $row['director'];

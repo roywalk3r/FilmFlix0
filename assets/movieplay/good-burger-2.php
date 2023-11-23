@@ -12,7 +12,7 @@
   <!-- Meta Keywords (optional) -->
   <meta name="keywords" content="movies, film, entertainment, watch movies, film streaming, FilmFlix, filmflix,movie,streaming" />
 
-  <title>Watch: Oppenheimer </title>
+  <title>Watch: Good Burger 2</title>
   <!-- Local Links -->
   <link rel="stylesheet" href="../css/watch.css" />
   <link rel="stylesheet" href="../swiperjs/swiper-scrollbar-min.css" />
@@ -42,8 +42,6 @@
 </head>
 
 <body>
-
-  <!-- Header -->
   <header>
     <!-- Nav  -->
     <div class="nav container">
@@ -328,17 +326,17 @@
   <div class="section-container body-container">
     <div class="main-left">
       <div class="movie-play">
-        <img src="https://www.themoviedb.org/t/p/original/rLb2cwF3Pazuxaj0sRXQ037tGI1.jpg" alt="thumbnail" id="thumbnail" />
-        <iframe src="https://vidsrc.to/embed/movie/872585" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0" id="video-iframe"></iframe>
+        <img src="https://www.themoviedb.org/t/p/original/kKxwzAbrA2mY7ixsO3f9uLF7S6v.jpg" alt="thumbnail" id="thumbnail" />
+        <iframe src="https://vidsrc.to/embed/movie/1101582" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0" id="video-iframe"></iframe>
         <i class="fa-solid fa-play play-movie-btn" style="color: #ffffff" id="play-button"></i>
       </div>
       <!-- About  -->
       <div class="about-movie body-container">
         <div class="sypnosis">
-          <img src="../img/oppenheimer.jpg" alt="" class="img" />
+          <img src="../img/good_burger2.jpg" alt="" class="img" />
           <div class="content">
-            <h2>Oppenheimer </h2>
-            <!-- <p>Genre: Drama, History</p> -->
+            <h2>Good Burger 2</h2>
+            <!-- <p>Genre: Comedy, Family</p> -->
 
             <div class="req">
               <span><i class="bx bx-calendar-alt"></i> 2023</span>
@@ -346,12 +344,10 @@
               <span><i class="bx bx-time"></i> 1h 24min</span>
             </div>
             <p>
-              The story of J. Robert Oppenheimer's role in the development of the atomic bomb during World War II.
-
-            </p>
-            <span id="release"><i class="fa fa-calendar"></i> Release date :2023-07-21<sup>th</sup>
+              Dexter Reed is down on his luck after another one of his inventions fails. Ed welcomes Dex back to Good Burger with open arms and gives him his old job back. With a new crew working at Good Burger, Dex devises a plan to get back on his feet but unfortunately puts the fate of Good Burger at risk once again. </p>
+            <span id="release"><i class="fa fa-calendar"></i> Release date :2023-11-22<sup>th</sup>
               July 2023</span>
-            <span id="writer">Writer <span id="name">: Christopher Nolan </span></span>
+            <span id="writer">Writer <span id="name">: Heath Seifert </span></span>
             <div class="rating-card">
               <div class="rating-content">
                 <h2 class="card-heading">7.81/10</h2>
@@ -376,12 +372,12 @@
         <!-- Movie Cast  -->
         <h2 class="cast-heading">Top Cast</h2>
         <div class="cast">
-          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/llkbyWKwpfowZ6C8peBjIV9jj99.jpg" alt="Cillian Murphy" class="cast-img" /></a><span class="cast-title">Cillian Murphy</span></div>
-          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/xDc01ud6ZtaJFQWg8YfffFlUBdY.jpg" alt="Emily Blunt" class="cast-img" /></a><span class="cast-title">Emily Blunt</span></div>
-          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/At3JgvaNeEN4Z4ESKlhhes85Xo3.jpg" alt="Matt Damon" class="cast-img" /></a><span class="cast-title">Matt Damon</span></div>
-          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/im9SAqJPZKEbVZGmjXuLI4O7RvM.jpg" alt="Robert Downey Jr." class="cast-img" /></a><span class="cast-title">Robert Downey Jr.</span></div>
-          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/ogoAeJyLzam5m3JvBFg6vwI8p0I.jpg" alt="Florence Pugh" class="cast-img" /></a><span class="cast-title">Florence Pugh</span></div>
-          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/dCfu2EN7FjISACcjilaJu7evwEc.jpg" alt="Josh Hartnett" class="cast-img" /></a><span class="cast-title">Josh Hartnett</span></div>
+          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/LKNYjjNtq5EbntZUKQWUHcTVji.jpg" alt="Kel Mitchell" class="cast-img" /></a><span class="cast-title">Kel Mitchell</span></div>
+          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/vHPhDGc1om91TzoIQ4zMscpNmxF.jpg" alt="Kenan Thompson" class="cast-img" /></a><span class="cast-title">Kenan Thompson</span></div>
+          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/9MDi35Fy6ym7SYbO3B04vf1vBnm.jpg" alt="Lil Rel Howery" class="cast-img" /></a><span class="cast-title">Lil Rel Howery</span></div>
+          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/v3oJlWGjdV3aHNXtGjWea3X1Tov.jpg" alt="Jillian Bell" class="cast-img" /></a><span class="cast-title">Jillian Bell</span></div>
+          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/tfwLOmrueNAebxRxJEZKX3l46l7.jpg" alt="Kamaia Fairburn" class="cast-img" /></a><span class="cast-title">Kamaia Fairburn</span></div>
+          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/nGUjQOlY1pqsJtiWrui2ylzkmBm.jpg" alt="Alex Hibbert" class="cast-img" /></a><span class="cast-title">Alex Hibbert</span></div>
         </div>
 
 
@@ -403,14 +399,14 @@
         <h2>Related</h2>
       </div>
       <div class="related-movies">
-        <a href="spiderman.php">
+        <a href="oppenheimer-.php">
           <div class="movie">
-            <img src="../img/popular-movie-1.jpg" alt="Spiderman: No Way Home" />
+            <img src="../img/oppenheimer.jpg" alt="Oppenheimer" />
             <div class="movie-container">
               <small>similar</small>
-              <h4>Spiderman: No Way Home</h4>
+              <h4>Oppenheimer</h4>
               <span class="bottom-content">
-                <p>action</p>
+                <p>History</p>
                 <p>1 Eps</p>
                 <p class="fas fa-bookmark">&nbsp; 57k</p>
               </span>
@@ -419,14 +415,14 @@
         </a>
 
 
-        <a href="acrosstheverse.php">
+        <a href="the-hunger-games-the-ballad-of-songbirds-snakes-.php">
           <div class="movie">
-            <img src="../img/spiderverse.jpg" alt="Spiderman: Across The Spider Verse" />
+            <img src="../img/hunger_games.jpg" alt="Hunger Games: Ballard..." />
             <div class="movie-container">
               <small>similar</small>
-              <h4>Spiderman: Across The Spider Verse</h4>
+              <h4>Hunger Games: Ballard...</h4>
               <span class="bottom-content">
-                <p>action</p>
+                <p>SCI-FI</p>
                 <p>1 Eps</p>
                 <p class="fas fa-bookmark">&nbsp; 67k</p>
               </span>

@@ -16,26 +16,21 @@
       name="keywords"
       content="movies, film, entertainment, watch movies, film streaming, FilmFlix, filmflix,movie,streaming"
     />
-    <link
-      rel="canonical"
-      href="https://rseann.helioho.st/assets/movieplay/a-royal-christmas-crush.html"
-    />
-    <title>Watch: Indiana Jones and the Dial of Destiny</title>
-    <!-- Local Links -->
-    <link rel="stylesheet" href="../css/watch.css" />
+   
+    <title>Watch: The Hunger Games: The Ballad of Songbirds & Snakes </title>
+   <!-- Local Links -->
+   <link rel="stylesheet" href="../css/watch.css" />
     <link rel="stylesheet" href="../swiperjs/swiper-scrollbar-min.css" />
     <link rel="stylesheet" href="../boxicons-2.1.4/css/boxicons.min.css" />
-    <link rel="stylesheet" href="../swiperjs/swiper-bundle.min.css" />
-    <script
-      src="https://kit.fontawesome.com/00a449879e.js"
-      crossorigin="anonymous"
-    ></script>
-
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="../swiperjs/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="../fontawesome-free-6.4.0-web/css/fontawesome.min.css"
+    />
     <link rel="shortcut icon" href="../img/fav-icon.png" type="image/x-icon" />
 
     <!-- ====================font-awesome cdnjs link================= -->
@@ -61,8 +56,8 @@
   </head>
 
   <body>
-    <!-- Header -->
-      <header>
+     <!-- Header -->
+     <header>
       <!-- Nav  -->
       <div class="nav container">
         <!-- logo -->
@@ -366,12 +361,12 @@ $conn->close();
     <div class="main-left">
         <div class="movie-play">
         <img
-            src="https://www.themoviedb.org/t/p/original/9m161GawbY3cWxe6txd1NOHTjd0.jpg"
+            src="https://www.themoviedb.org/t/p/original/5a4JdoFwll5DRtKMe7JLuGQ9yJm.jpg"
             alt="thumbnail"
             id="thumbnail"
           />
           <iframe
-            src="https://vidsrc.to/embed/movie/335977"
+            src="https://vidsrc.to/embed/movie/695721"
             allowfullscreen
             allowtransparency
             allow="autoplay"
@@ -388,10 +383,10 @@ $conn->close();
         <!-- About  -->
         <div class="about-movie body-container">
           <div class="sypnosis">
-            <img src="../img/indiana-poster.jpg" alt="" class="img" />
+            <img src="../img/hunger_games.jpg" alt="" class="img" />
             <div class="content">
-              <h2>Indiana Jones and the Dial of Destiny</h2>
-        <!-- <p>Genre: Mystery</p> -->
+              <h2>The Hunger Games: The Ballad of Songbirds & Snakes </h2>
+        <!-- <p>Genre: Action, SC-FI</p> -->
 
               <div class="req">
                 <span><i class="bx bx-calendar-alt"></i> 2023</span>
@@ -399,13 +394,13 @@ $conn->close();
                 <span><i class="bx bx-time"></i> 1h 24min</span>
               </div>
               <p>
-              Finding himself in a new era, and approaching retirement, Indy wrestles with fitting into a world that seems to have outgrown him. But as the tentacles of an all-too-familiar evil return in the form of an old rival, Indy must don his hat and pick up his whip once more to make sure an ancient and powerful artifact does not fall into the wrong hands.              </p>
+              64 years before he becomes the tyrannical president of Panem, Coriolanus Snow sees a chance for a change in fortunes when he mentors Lucy Gray Baird, the female tribute from District 12.              </p>
               <span id="release"
-                ><i class="fa fa-calendar"></i> Release date :2023-06-30<sup>th</sup>
+                ><i class="fa fa-calendar"></i> Release date :2023-11-17<sup>th</sup>
                 July 2023</span
               >
               <span id="writer"
-                >Writer <span id="name">: James Mangold </span></span
+                >Writer <span id="name">: Francis Lawrence </span></span
               >
               <div class="rating-card">
                 <div class="rating-content">
@@ -431,7 +426,9 @@ $conn->close();
 <!-- Movie Cast  -->
 <h2 class="cast-heading">Top Cast</h2>
 <div class="cast">
-    <div class="cast-box"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/ActhM39LTxgx3tnJv3s5nM6hGD1.jpg" alt="Harrison Ford" class="cast-img" /><span class="cast-title">Harrison Ford</span></div><div class="cast-box"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/ppRIfUYcl0RWlxp5gSmdzIFFLAS.jpg" alt="Phoebe Waller-Bridge" class="cast-img" /><span class="cast-title">Phoebe Waller-Bridge</span></div><div class="cast-box"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/ntwPvV4GKGGHO3I7LcHMwhXfsw9.jpg" alt="Mads Mikkelsen" class="cast-img" /><span class="cast-title">Mads Mikkelsen</span></div><div class="cast-box"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/tmFuUljxIvuQbEZqfF9btLBOFDn.jpg" alt="Boyd Holbrook" class="cast-img" /><span class="cast-title">Boyd Holbrook</span></div><div class="cast-box"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/8Zz5WYE1Muc3AX9daxCxgNTRE5.jpg" alt="Olivier Richters" class="cast-img" /><span class="cast-title">Olivier Richters</span></div><div class="cast-box"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/64mNpiPrraEUjwSHLJzLfFxjXwT.jpg" alt="Ethann Isedore" class="cast-img" /><span class="cast-title">Ethann Isedore</span></div></div>
+    <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/ycseVLFDnnTQ9QubleZjdbrGl4r.jpg" alt="Rachel Zegler" class="cast-img" /></a><span class="cast-title">Rachel Zegler</span></div><div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/rRG5YxKT1TIl97nONLnyKZZzhRf.jpg" alt="Tom Blyth" class="cast-img" /></a><span class="cast-title">Tom Blyth</span></div><div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/wcaE0CIHIfS1wD8nFwCD3vxmI7n.jpg" alt="Hunter Schafer" class="cast-img" /></a><span class="cast-title">Hunter Schafer</span></div><div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/gCjMdmW1DiPAClHVl4zHEIffIsE.jpg" alt="Jason Schwartzman" class="cast-img" /></a><span class="cast-title">Jason Schwartzman</span></div><div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/9CAd7wr8QZyIN0E7nm8v1B6WkGn.jpg" alt="Peter Dinklage" class="cast-img" /></a><span class="cast-title">Peter Dinklage</span></div><div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/xDssw6vpYNRjsybvMPRE30e0dPN.jpg" alt="Viola Davis" class="cast-img" /></a><span class="cast-title">Viola Davis</span></div></div>
+
+
         </div>
 
      <!-- Download -->
@@ -450,14 +447,14 @@ $conn->close();
           <h2>Related</h2>
         </div>
         <div class="related-movies">
-          <a href="spiderman.html">
+          <a href="oppenheimer-.php">
     <div class="movie">
-      <img src="../img/popular-movie-1.jpg" alt="Spiderman: No Way Home" />
+      <img src="../img/oppenheimer.jpg" alt="Oppenheimer" />
       <div class="movie-container">
         <small>similar</small>
-        <h4>Spiderman: No Way Home</h4>
+        <h4>Oppenheimer</h4>
         <span class="bottom-content">
-          <p>action</p>
+          <p>History</p>
           <p>1 Eps</p>
           <p class="fas fa-bookmark">&nbsp; 57k</p>
         </span>
@@ -466,7 +463,7 @@ $conn->close();
   </a>
 
 
-  <a href="acrosstheverse.html">
+  <a href="acrosstheverse.php">
     <div class="movie">
       <img src="../img/spiderverse.jpg" alt="Spiderman: Across The Spider Verse" />
       <div class="movie-container">
@@ -481,7 +478,7 @@ $conn->close();
     </div>
   </a>
 
-  <a href="transformers.html">
+  <a href="transformers.php">
     <div class="movie">
       <img src="../img/transformers.jpg" alt="Trnasformers Rise Of The Beast" />
       <div class="movie-container">
@@ -504,7 +501,7 @@ $conn->close();
           <div class="swiper-slide">
         <img src="../img/movie-1.jpg" alt="" />
         <div class="box-text">
-          <a href="../movieplay/jumanji.html" class="watch-btn play-btn">
+          <a href="../movieplay/jumanji.php" class="watch-btn play-btn">
             <i class="bx bx-right-arrow"></i>
           </a>
         </div>
@@ -513,7 +510,7 @@ $conn->close();
           <div class="swiper-slide">
         <img src="../img/movie-2.jpg" alt="" />
         <div class="box-text">
-          <a href="../movieplay/hitman.html" class="watch-btn play-btn">
+          <a href="../movieplay/hitman.php" class="watch-btn play-btn">
             <i class="bx bx-right-arrow"></i>
           </a>
         </div>
@@ -522,7 +519,7 @@ $conn->close();
           <div class="swiper-slide">
         <img src="../img/movie-3.jpg" alt="" />
         <div class="box-text">
-          <a href="../movieplay/Shang-chi.html" class="watch-btn play-btn">
+          <a href="../movieplay/Shang-chi.php" class="watch-btn play-btn">
             <i class="bx bx-right-arrow"></i>
           </a>
         </div>
@@ -531,7 +528,7 @@ $conn->close();
           <div class="swiper-slide">
         <img src="../img/movie-4.jpg" alt="" />
         <div class="box-text">
-          <a href="../movieplay/Eternals.html" class="watch-btn play-btn">
+          <a href="../movieplay/Eternals.php" class="watch-btn play-btn">
             <i class="bx bx-right-arrow"></i>
           </a>
         </div>
@@ -540,7 +537,7 @@ $conn->close();
           <div class="swiper-slide">
         <img src="../img/crush-christmas.jpg" alt="" />
         <div class="box-text">
-          <a href="../movieplay/a-royal-christmas-crush.html" class="watch-btn play-btn">
+          <a href="../movieplay/a-royal-christmas-crush.php" class="watch-btn play-btn">
             <i class="bx bx-right-arrow"></i>
           </a>
         </div>
@@ -549,7 +546,7 @@ $conn->close();
           <div class="swiper-slide">
         <img src="../img/tomorrow_job.jpg" alt="" />
         <div class="box-text">
-          <a href="../movieplay/The_Tomorrow_Job.html" class="watch-btn play-btn">
+          <a href="../movieplay/The_Tomorrow_Job.php" class="watch-btn play-btn">
             <i class="bx bx-right-arrow"></i>
           </a>
         </div>
@@ -558,7 +555,7 @@ $conn->close();
           <div class="swiper-slide">
         <img src="../img/no-hard-feelings.jpg" alt="" />
         <div class="box-text">
-          <a href="../movieplay/nohardfeelings.html" class="watch-btn play-btn">
+          <a href="../movieplay/nohardfeelings.php" class="watch-btn play-btn">
             <i class="bx bx-right-arrow"></i>
           </a>
         </div>
@@ -567,7 +564,7 @@ $conn->close();
           <div class="swiper-slide">
         <img src="../img/horriblebosses.jpg" alt="" />
         <div class="box-text">
-          <a href="../movieplay/horriblebosses.html" class="watch-btn play-btn">
+          <a href="../movieplay/horriblebosses.php" class="watch-btn play-btn">
             <i class="bx bx-right-arrow"></i>
           </a>
         </div>
@@ -576,7 +573,7 @@ $conn->close();
           <div class="swiper-slide">
         <img src="../img/specter.jpg" alt="" />
         <div class="box-text">
-          <a href="../movieplay/Spectre.html" class="watch-btn play-btn">
+          <a href="../movieplay/Spectre.php" class="watch-btn play-btn">
             <i class="bx bx-right-arrow"></i>
           </a>
         </div>
@@ -609,6 +606,7 @@ $conn->close();
       <div id="disqus_thread"></div>
     </div>
 
+   
     <!-- Copyright  -->
     <div class="copyright">&#169; Godak All rights Reserved</div>
     <!-- Link Swiper  Js -->
@@ -630,6 +628,10 @@ $conn->close();
       id="dsq-count-scr"
       src="//fan2one.disqus.com/count.js"
       async
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/00a449879e.js"
+      crossorigin="anonymous"
     ></script>
   </body>
 </html>

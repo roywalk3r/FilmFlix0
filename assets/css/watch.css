@@ -325,12 +325,12 @@
   height: 100%;
   display: block;
   object-fit: cover;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
   border-radius: 8px;
 }
-.seasons .card img:hover {
+/* .seasons .card img:hover {
   filter: grayscale(0%);
-}
+} */
 .card .overlay {
   position: absolute;
   top: 0;
@@ -350,7 +350,7 @@
   font-family: "Poppins", sans-serif;
   text-align: center;
 }
-img {
+.seasons .card img {
   transition: filter 0.6s ease;
 }
 .seasons .card img:hover {

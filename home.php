@@ -465,6 +465,10 @@ $conn->close();
     <!-- Heading -->
     <div class="heading">
         <h2 class="heading-title">Recently Added</h2>
+        <div class="swiper-btn">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
     </div>
     <!-- Content -->
     <div class="popular-content swiper">

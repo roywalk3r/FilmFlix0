@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Append the autoplay parameter using a question mark or ampersand
     if (videoIframe.src.indexOf("?") === -1) {
-      videoIframe.src += "?autoplay=1";
+      videoIframe.src += "?autoplay=1&mute=1";
     } else {
       videoIframe.src += "&autoplay=1";
     }
