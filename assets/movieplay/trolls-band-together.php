@@ -12,7 +12,7 @@
   <!-- Meta Keywords (optional) -->
   <meta name="keywords" content="movies, film, entertainment, watch movies, film streaming, FilmFlix, filmflix,movie,streaming" />
 
-  <title>Watch: The Hunger Games: The Ballad of Songbirds & Snakes </title>
+  <title>Watch: Trolls Band Together</title>
   <!-- Local Links -->
   <link rel="stylesheet" href="../css/watch.css" />
   <link rel="stylesheet" href="../swiperjs/swiper-scrollbar-min.css" />
@@ -42,7 +42,6 @@
 </head>
 
 <body>
-  <!-- Header -->
   <header>
     <!-- Nav  -->
     <div class="nav container">
@@ -327,17 +326,17 @@
   <div class="section-container body-container">
     <div class="main-left">
       <div class="movie-play">
-        <img src="https://www.themoviedb.org/t/p/original/5a4JdoFwll5DRtKMe7JLuGQ9yJm.jpg" alt="thumbnail" id="thumbnail" />
-        <iframe src="https://vidsrc.to/embed/movie/695721" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0" id="video-iframe"></iframe>
+        <img src="https://www.themoviedb.org/t/p/original/xgGGinKRL8xeRkaAR9RMbtyk60y.jpg" alt="thumbnail" id="thumbnail" />
+        <iframe src="https://vidsrc.to/embed/movie/901362" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0" id="video-iframe"></iframe>
         <i class="fa-solid fa-play play-movie-btn" style="color: #ffffff" id="play-button"></i>
       </div>
       <!-- About  -->
       <div class="about-movie body-container">
         <div class="sypnosis">
-          <img src="../img/hunger_games.jpg" alt="" class="img" />
+          <img src="../../posters/trolls_band_together.jpg" alt="" class="img" />
           <div class="content">
-            <h2>The Hunger Games: The Ballad of Songbirds & Snakes </h2>
-            <!-- <p>Genre: Action, SC-FI</p> -->
+            <h2>Trolls Band Together</h2>
+            <!-- <p>Genre: Animation, Family, Music, Fantasy, Comedy</p> -->
 
             <div class="req">
               <span><i class="bx bx-calendar-alt"></i> 2023</span>
@@ -345,9 +344,9 @@
               <span><i class="bx bx-time"></i> 1h 24min</span>
             </div>
             <p>
-              64 years before he becomes the tyrannical president of Panem, Coriolanus Snow sees a chance for a change in fortunes when he mentors Lucy Gray Baird, the female tribute from District 12. </p>
+              When Branch’s brother, Floyd, is kidnapped for his musical talents by a pair of nefarious pop-star villains, Branch and Poppy embark on a harrowing and emotional journey to reunite the other brothers and rescue Floyd from a fate even worse than pop-culture obscurity. </p>
             <span id="release"><i class="fa fa-calendar"></i> Release date :2023-11-17</span>
-            <span id="writer">Writer <span id="name">: Francis Lawrence </span></span>
+            <span id="writer">Writer <span id="name">: Walt Dohrn </span></span>
             <div class="rating-card">
               <div class="rating-content">
                 <h2 class="card-heading">7.81/10</h2>
@@ -372,12 +371,12 @@
         <!-- Movie Cast  -->
         <h2 class="cast-heading">Top Cast</h2>
         <div class="cast">
-          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/ycseVLFDnnTQ9QubleZjdbrGl4r.jpg" alt="Rachel Zegler" class="cast-img" /></a><span class="cast-title">Rachel Zegler</span></div>
-          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/rRG5YxKT1TIl97nONLnyKZZzhRf.jpg" alt="Tom Blyth" class="cast-img" /></a><span class="cast-title">Tom Blyth</span></div>
-          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/wcaE0CIHIfS1wD8nFwCD3vxmI7n.jpg" alt="Hunter Schafer" class="cast-img" /></a><span class="cast-title">Hunter Schafer</span></div>
-          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/gCjMdmW1DiPAClHVl4zHEIffIsE.jpg" alt="Jason Schwartzman" class="cast-img" /></a><span class="cast-title">Jason Schwartzman</span></div>
-          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/9CAd7wr8QZyIN0E7nm8v1B6WkGn.jpg" alt="Peter Dinklage" class="cast-img" /></a><span class="cast-title">Peter Dinklage</span></div>
-          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/xDssw6vpYNRjsybvMPRE30e0dPN.jpg" alt="Viola Davis" class="cast-img" /></a><span class="cast-title">Viola Davis</span></div>
+          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/yirl6fEmeXY5xcvJw3nTcCNq9Cw.jpg" alt="Anna Kendrick" class="cast-img" /></a><span class="cast-title">Anna Kendrick</span></div>
+          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/6Yk5t9RwkdkAT8Qv45934Eez2CA.jpg" alt="Justin Timberlake" class="cast-img" /></a><span class="cast-title">Justin Timberlake</span></div>
+          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/8XJzD4mrxlBvtYjP1wVNTW5K9ya.jpg" alt="Camila Cabello" class="cast-img" /></a><span class="cast-title">Camila Cabello</span></div>
+          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/e9XlcFnZQiBSQ1vISQVyTOrkIaq.jpg" alt="Eric André" class="cast-img" /></a><span class="cast-title">Eric André</span></div>
+          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/6u95ZNLrADSlK7CVkgEvC0jLIJh.jpg" alt="Amy Schumer" class="cast-img" /></a><span class="cast-title">Amy Schumer</span></div>
+          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/ubSoBKHuh7TnMze5qq0CeV3eriK.jpg" alt="Andrew Rannells" class="cast-img" /></a><span class="cast-title">Andrew Rannells</span></div>
         </div>
 
 
@@ -387,9 +386,9 @@
       <div class="download">
         <h2 class="download-title">Download Movie</h2>
         <div class="download-links">
-          <a href=" https://streamtape.com/v/brp7mwwlZwuPYoW/The_Transporter_2002_%282002%29_BluRay_720p_%28fzmovies.net%29_ef7403c2e8fe3cdeb7e02991ac32371d.mkv#" target="_blank" download="Jumanji">480p</a>
-          <a href=" https://streamtape.com/v/brp7mwwlZwuPYoW/The_Transporter_2002_%282002%29_BluRay_720p_%28fzmovies.net%29_ef7403c2e8fe3cdeb7e02991ac32371d.mkv#" target="_blank" download>720p</a>
-          <a href=" https://streamtape.com/v/brp7mwwlZwuPYoW/The_Transporter_2002_%282002%29_BluRay_720p_%28fzmovies.net%29_ef7403c2e8fe3cdeb7e02991ac32371d.mkv#" target="_blank" download>1080p</a>
+          <a href=" https://vzbr.vidrock2.store/_v1/12a3c523f8105800ed8c394685aeeb0b952eaf5c01bdf4b715437baea93ece832257df1a4b6125fcfa38c35da05dee86aad28d46d73fc4e9d4e5a13f5377b485619915e3091fb40d12c3/h/afed4/fbc;15a38727ff105845ab8c641acebcee10903ca9445cb8b6b74b456ea4.m3u8" target="_blank" download="Jumanji">480p</a>
+          <a href=" https://vzbr.vidrock2.store/_v1/12a3c523f8105800ed8c394685aeeb0b952eaf5c01bdf4b715437baea93ece832257df1a4b6125fcfa38c35da05dee86aad28d46d73fc4e9d4e5a13f5377b485619915e3091fb40d12c3/h/afed4/fbc;15a38727ff105845ab8c641acebcee10903ca9445cb8b6b74b456ea4.m3u8" target="_blank" download>720p</a>
+          <a href=" https://vzbr.vidrock2.store/_v1/12a3c523f8105800ed8c394685aeeb0b952eaf5c01bdf4b715437baea93ece832257df1a4b6125fcfa38c35da05dee86aad28d46d73fc4e9d4e5a13f5377b485619915e3091fb40d12c3/h/afed4/fbc;15a38727ff105845ab8c641acebcee10903ca9445cb8b6b74b456ea4.m3u8" target="_blank" download>1080p</a>
         </div>
       </div>
     </div>
@@ -415,14 +414,14 @@
         </a>
 
 
-        <a href="acrosstheverse.php">
+        <a href="the-hunger-games-the-ballad-of-songbirds-snakes-.php">
           <div class="movie">
-            <img src="../img/spiderverse.jpg" alt="Spiderman: Across The Spider Verse" />
+            <img src="../img/hunger_games.jpg" alt="Hunger Games: Ballard..." />
             <div class="movie-container">
               <small>similar</small>
-              <h4>Spiderman: Across The Spider Verse</h4>
+              <h4>Hunger Games: Ballard...</h4>
               <span class="bottom-content">
-                <p>action</p>
+                <p>SCI-FI</p>
                 <p>1 Eps</p>
                 <p class="fas fa-bookmark">&nbsp; 67k</p>
               </span>
@@ -430,14 +429,14 @@
           </div>
         </a>
 
-        <a href="transformers.php">
+        <a href="good-burger-2.php">
           <div class="movie">
-            <img src="../img/transformers.jpg" alt="Trnasformers Rise Of The Beast" />
+            <img src="../img/good_burger2.jpg" alt="Good Burger 2" />
             <div class="movie-container">
               <small>similar</small>
-              <h4>Trnasformers Rise Of The Beast</h4>
+              <h4>Good Burger 2</h4>
               <span class="bottom-content">
-                <p>Action</p>
+                <p>Comedy, Family</p>
                 <p>1 Eps</p>
                 <p class="fas fa-bookmark">&nbsp; 87k</p>
               </span>

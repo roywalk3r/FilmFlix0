@@ -12,7 +12,7 @@
   <!-- Meta Keywords (optional) -->
   <meta name="keywords" content="movies, film, entertainment, watch movies, film streaming, FilmFlix, filmflix,movie,streaming" />
 
-  <title>Watch: The Hunger Games: The Ballad of Songbirds & Snakes </title>
+  <title>Watch: Mission: Impossible - Dead Reckoning Part One</title>
   <!-- Local Links -->
   <link rel="stylesheet" href="../css/watch.css" />
   <link rel="stylesheet" href="../swiperjs/swiper-scrollbar-min.css" />
@@ -323,31 +323,33 @@
       </button>
     </div>
   </header>
+
+
   <!-- Play Movie Container -->
   <div class="section-container body-container">
     <div class="main-left">
       <div class="movie-play">
-        <img src="https://www.themoviedb.org/t/p/original/5a4JdoFwll5DRtKMe7JLuGQ9yJm.jpg" alt="thumbnail" id="thumbnail" />
-        <iframe src="https://vidsrc.to/embed/movie/695721" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0" id="video-iframe"></iframe>
+        <img src="https://www.themoviedb.org/t/p/original/TFTfzrkX8L7bAKUcch6qLmjpLu.jpg" alt="thumbnail" id="thumbnail" />
+        <iframe src="https://vidsrc.to/embed/movie/575264" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0" id="video-iframe"></iframe>
         <i class="fa-solid fa-play play-movie-btn" style="color: #ffffff" id="play-button"></i>
       </div>
       <!-- About  -->
       <div class="about-movie body-container">
         <div class="sypnosis">
-          <img src="../img/hunger_games.jpg" alt="" class="img" />
+          <img src="../.././posters/mission_impossible.jpg" alt="" class="img" />
           <div class="content">
-            <h2>The Hunger Games: The Ballad of Songbirds & Snakes </h2>
-            <!-- <p>Genre: Action, SC-FI</p> -->
+            <h2>Mission: Impossible - Dead Reckoning Part One</h2>
+            <!-- <p>Genre: Action, Thriller</p> -->
 
             <div class="req">
               <span><i class="bx bx-calendar-alt"></i> 2023</span>
               <span class="age-req"><i>17+</i></span>
-              <span><i class="bx bx-time"></i> 1h 24min</span>
+              <span><i class="bx bx-time"></i> 2h 44m</span>
             </div>
             <p>
-              64 years before he becomes the tyrannical president of Panem, Coriolanus Snow sees a chance for a change in fortunes when he mentors Lucy Gray Baird, the female tribute from District 12. </p>
-            <span id="release"><i class="fa fa-calendar"></i> Release date :2023-11-17</span>
-            <span id="writer">Writer <span id="name">: Francis Lawrence </span></span>
+              Ethan Hunt and his IMF team embark on their most dangerous mission yet: To track down a terrifying new weapon that threatens all of humanity before it falls into the wrong hands. With control of the future and the worlds fate at stake and dark forces from Ethans past closing in, a deadly race around the globe begins. Confronted by a mysterious, all-powerful enemy, Ethan must consider that nothing can matter more than his mission—not even the lives of those he cares about most. </p>
+            <span id="release"><i class="fa fa-calendar"></i> Release date :2023-12-12</span>
+            <span id="writer">Writer <span id="name">: Erik Jendresen </span></span>
             <div class="rating-card">
               <div class="rating-content">
                 <h2 class="card-heading">7.81/10</h2>
@@ -372,12 +374,12 @@
         <!-- Movie Cast  -->
         <h2 class="cast-heading">Top Cast</h2>
         <div class="cast">
-          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/ycseVLFDnnTQ9QubleZjdbrGl4r.jpg" alt="Rachel Zegler" class="cast-img" /></a><span class="cast-title">Rachel Zegler</span></div>
-          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/rRG5YxKT1TIl97nONLnyKZZzhRf.jpg" alt="Tom Blyth" class="cast-img" /></a><span class="cast-title">Tom Blyth</span></div>
-          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/wcaE0CIHIfS1wD8nFwCD3vxmI7n.jpg" alt="Hunter Schafer" class="cast-img" /></a><span class="cast-title">Hunter Schafer</span></div>
-          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/gCjMdmW1DiPAClHVl4zHEIffIsE.jpg" alt="Jason Schwartzman" class="cast-img" /></a><span class="cast-title">Jason Schwartzman</span></div>
-          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/9CAd7wr8QZyIN0E7nm8v1B6WkGn.jpg" alt="Peter Dinklage" class="cast-img" /></a><span class="cast-title">Peter Dinklage</span></div>
-          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/xDssw6vpYNRjsybvMPRE30e0dPN.jpg" alt="Viola Davis" class="cast-img" /></a><span class="cast-title">Viola Davis</span></div>
+          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/5sjLDtdwjuVdZNdrnbAwDQdn5W.jpg" alt="Tom Cruise" class="cast-img" /></a><span class="cast-title">Tom Cruise</span></div>
+          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/x57wXHexIjD2ywly9cRA4rov7cu.jpg" alt="Hayley Atwell" class="cast-img" /></a><span class="cast-title">Hayley Atwell</span></div>
+          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/ohAOsD8E4tu35PI2buzZORpn9Ef.jpg" alt="Ving Rhames" class="cast-img" /></a><span class="cast-title">Ving Rhames</span></div>
+          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/6ftW0kUeYno1kYfuwSTBILOtxjj.jpg" alt="Simon Pegg" class="cast-img" /></a><span class="cast-title">Simon Pegg</span></div>
+          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/lJloTOheuQSirSLXNA3JHsrMNfH.jpg" alt="Rebecca Ferguson" class="cast-img" /></a><span class="cast-title">Rebecca Ferguson</span></div>
+          <div class="cast-box"><a target="_blank" title="Read about actor on MovieDB"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/5fbvIkZ02RdcXfZHUUk4cQ9kILK.jpg" alt="Vanessa Kirby" class="cast-img" /></a><span class="cast-title">Vanessa Kirby</span></div>
         </div>
 
 
@@ -406,7 +408,7 @@
               <small>similar</small>
               <h4>Oppenheimer</h4>
               <span class="bottom-content">
-                <p>History</p>
+                <p>action</p>
                 <p>1 Eps</p>
                 <p class="fas fa-bookmark">&nbsp; 57k</p>
               </span>
@@ -415,14 +417,14 @@
         </a>
 
 
-        <a href="acrosstheverse.php">
+        <a href="the-hunger-games-the-ballad-of-songbirds-snakes-.php">
           <div class="movie">
-            <img src="../img/spiderverse.jpg" alt="Spiderman: Across The Spider Verse" />
+            <img src="../img/hunger_games.jpg" alt="Hunger Games: Ballard..." />
             <div class="movie-container">
               <small>similar</small>
-              <h4>Spiderman: Across The Spider Verse</h4>
+              <h4>Hunger Games: Ballard...</h4>
               <span class="bottom-content">
-                <p>action</p>
+                <p>SCI-FI</p>
                 <p>1 Eps</p>
                 <p class="fas fa-bookmark">&nbsp; 67k</p>
               </span>
@@ -430,14 +432,14 @@
           </div>
         </a>
 
-        <a href="transformers.php">
+        <a href="dashing-through-the-snow-.php">
           <div class="movie">
-            <img src="../img/transformers.jpg" alt="Trnasformers Rise Of The Beast" />
+            <img src="../../posters/dashing_through_the_snow.jpg" alt="Dashing Through The Snow" />
             <div class="movie-container">
               <small>similar</small>
-              <h4>Trnasformers Rise Of The Beast</h4>
+              <h4>Dashing Through The Snow</h4>
               <span class="bottom-content">
-                <p>Action</p>
+                <p>Fantasy, Family</p>
                 <p>1 Eps</p>
                 <p class="fas fa-bookmark">&nbsp; 87k</p>
               </span>

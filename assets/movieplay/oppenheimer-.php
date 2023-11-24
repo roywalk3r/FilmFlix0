@@ -349,8 +349,7 @@
               The story of J. Robert Oppenheimer's role in the development of the atomic bomb during World War II.
 
             </p>
-            <span id="release"><i class="fa fa-calendar"></i> Release date :2023-07-21<sup>th</sup>
-              July 2023</span>
+            <span id="release"><i class="fa fa-calendar"></i> Release date :2023-07-21</span>
             <span id="writer">Writer <span id="name">: Christopher Nolan </span></span>
             <div class="rating-card">
               <div class="rating-content">

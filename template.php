@@ -23,6 +23,7 @@ if (isset($_GET['id'])) {
     $description = $row['description'];
     $release_date = $row['release_date'];
     $genre = $row['genre'];
+    $time = $row['time'];
     $director = $row['director'];
     $poster_url = $row['poster_url'];
     $thumbnail_url = $row['thumbnail_url']; // Retrieve new field
@@ -142,11 +143,25 @@ $conn->close();
 
 <body>
   <!-- Header -->
-  <?php
-  // Include the header
-  include('header.php');
-  ?>
+  <div id="headerContainer"></div>
 
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    // Use jQuery to fetch and inject the header content
+    $(document).ready(function() {
+      $.ajax({
+        url: 'header.php', // Path to your PHP file
+        type: 'GET',
+        success: function(data) {
+          // Inject the header content into the specified container
+          $('#headerContainer').html(data);
+        },
+        error: function() {
+          console.error('Error fetching header content');
+        }
+      });
+    });
+  </script>
   <!-- Play Movie Container -->
   <div class="section-container body-container">
     <div class="main-left">
@@ -158,7 +173,7 @@ $conn->close();
       <!-- About  -->
       <div class="about-movie body-container">
         <div class="sypnosis">
-          <img src="<?php echo $poster_url; ?>" alt="" class="img" />
+          <img src="../../<?php echo $poster_url; ?>" alt="" class="img" />
           <div class="content">
             <h2><?php echo $title; ?></h2>
             <!-- <p>Genre: <?php echo $genre; ?></p> -->
@@ -166,13 +181,12 @@ $conn->close();
             <div class="req">
               <span><i class="bx bx-calendar-alt"></i> 2023</span>
               <span class="age-req"><i>17+</i></span>
-              <span><i class="bx bx-time"></i> 1h 24min</span>
+              <span><i class="bx bx-time"></i> <?php echo $time; ?></span>
             </div>
             <p>
               <?php echo $description; ?>
             </p>
-            <span id="release"><i class="fa fa-calendar"></i> Release date :<?php echo $release_date; ?><sup>th</sup>
-              July 2023</span>
+            <span id="release"><i class="fa fa-calendar"></i> Release date :<?php echo $release_date; ?></span>
             <span id="writer">Writer <span id="name">: <?php echo $director; ?> </span></span>
             <div class="rating-card">
               <div class="rating-content">

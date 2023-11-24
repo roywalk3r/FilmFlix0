@@ -1,5 +1,3 @@
-
-
 <?php
 // Database connection
 $servername = "localhost";
@@ -19,6 +17,7 @@ if (isset($_POST['submit'])) {
     $description = $_POST['description'];
     $release_date = $_POST['release_date'];
     $genre = $_POST['genre'];
+    $time = $_POST['time'];
     $director = $_POST['director'];
     $poster_url = '';
     $thumbnail_url = $_POST['thumbnail_url']; // New field
@@ -71,7 +70,7 @@ if (isset($_POST['submit'])) {
 
     // Handle file upload (poster image)
     if ($_FILES['poster']['size'] > 0) {
-        $uploadDir = '../img/';
+        $uploadDir = './posters/';
         $posterName = basename($_FILES['poster']['name']);
         $posterPath = $uploadDir . $posterName;
 
@@ -84,8 +83,8 @@ if (isset($_POST['submit'])) {
     }
 
     // Insert movie details into the database
-    $sql = "INSERT INTO movie (title, description, release_date, genre, director, poster_url, thumbnail_url, cast1_name, cast1_img_url, cast2_name, cast2_img_url, cast3_name, cast3_img_url, cast4_name, cast4_img_url, cast5_name, cast5_img_url, cast6_name, cast6_img_url, video_url, download_link1, download_link2, download_link3, related1_name, related1_genre, related1_img_url, related1_movie_url, related2_name, related2_genre, related2_img_url, related2_movie_url, related3_name, related3_genre, related3_img_url, related3_movie_url, recommended1_img_url, recommended1_movie_url, recommended2_img_url, recommended2_movie_url, recommended3_img_url, recommended3_movie_url, recommended4_img_url, recommended4_movie_url, recommended5_img_url, recommended5_movie_url, recommended6_img_url, recommended6_movie_url, recommended7_img_url, recommended7_movie_url, recommended8_img_url, recommended8_movie_url, recommended9_img_url, recommended9_movie_url)
-            VALUES ('$title', '$description', '$release_date', '$genre', '$director', '$poster_url', '$thumbnail_url', '$cast1_name', '$cast1_img_url', '$cast2_name', '$cast2_img_url', '$cast3_name', '$cast3_img_url', '$cast4_name', '$cast4_img_url', '$cast5_name', '$cast5_img_url', '$cast6_name', '$cast6_img_url', '$video_url', '$download_link1', '$download_link2', '$download_link3', '$related1_name', '$related1_genre', '$related1_img_url', '$related1_movie_url', '$related2_name', '$related2_genre', '$related2_img_url', '$related2_movie_url', '$related3_name', '$related3_genre', '$related3_img_url', '$related3_movie_url', '$recommended1_img_url', '$recommended1_movie_url', '$recommended2_img_url', '$recommended2_movie_url', '$recommended3_img_url', '$recommended3_movie_url', '$recommended4_img_url', '$recommended4_movie_url', '$recommended5_img_url', '$recommended5_movie_url', '$recommended6_img_url', '$recommended6_movie_url', '$recommended7_img_url', '$recommended7_movie_url', '$recommended8_img_url', '$recommended8_movie_url', '$recommended9_img_url', '$recommended9_movie_url')";
+    $sql = "INSERT INTO movie (title, description, release_date, genre,time, director, poster_url, thumbnail_url, cast1_name, cast1_img_url, cast2_name, cast2_img_url, cast3_name, cast3_img_url, cast4_name, cast4_img_url, cast5_name, cast5_img_url, cast6_name, cast6_img_url, video_url, download_link1, download_link2, download_link3, related1_name, related1_genre, related1_img_url, related1_movie_url, related2_name, related2_genre, related2_img_url, related2_movie_url, related3_name, related3_genre, related3_img_url, related3_movie_url, recommended1_img_url, recommended1_movie_url, recommended2_img_url, recommended2_movie_url, recommended3_img_url, recommended3_movie_url, recommended4_img_url, recommended4_movie_url, recommended5_img_url, recommended5_movie_url, recommended6_img_url, recommended6_movie_url, recommended7_img_url, recommended7_movie_url, recommended8_img_url, recommended8_movie_url, recommended9_img_url, recommended9_movie_url)
+            VALUES ('$title', '$description', '$release_date', '$genre', '$time', '$director', '$poster_url', '$thumbnail_url', '$cast1_name', '$cast1_img_url', '$cast2_name', '$cast2_img_url', '$cast3_name', '$cast3_img_url', '$cast4_name', '$cast4_img_url', '$cast5_name', '$cast5_img_url', '$cast6_name', '$cast6_img_url', '$video_url', '$download_link1', '$download_link2', '$download_link3', '$related1_name', '$related1_genre', '$related1_img_url', '$related1_movie_url', '$related2_name', '$related2_genre', '$related2_img_url', '$related2_movie_url', '$related3_name', '$related3_genre', '$related3_img_url', '$related3_movie_url', '$recommended1_img_url', '$recommended1_movie_url', '$recommended2_img_url', '$recommended2_movie_url', '$recommended3_img_url', '$recommended3_movie_url', '$recommended4_img_url', '$recommended4_movie_url', '$recommended5_img_url', '$recommended5_movie_url', '$recommended6_img_url', '$recommended6_movie_url', '$recommended7_img_url', '$recommended7_movie_url', '$recommended8_img_url', '$recommended8_movie_url', '$recommended9_img_url', '$recommended9_movie_url')";
 
     if ($conn->query($sql) === TRUE) {
         // Movie added successfully!
@@ -93,14 +92,14 @@ if (isset($_POST['submit'])) {
         // Get the inserted movie's ID
         $movie_id = $conn->insert_id;
 
-// Get the movie title for the HTML file name
-$html_file_name = sanitizeFileName($title) . '.php';
+        // Get the movie title for the HTML file name
+        $html_file_name = sanitizeFileName($title) . '.php';
 
-// Specify the directory where you want to save the HTML file
-$directory = 'assets/movieplay/';
+        // Specify the directory where you want to save the HTML file
+        $directory = 'assets/movieplay/';
 
-// Create the full path to the HTML file
-$html_file_path = $directory . $html_file_name;
+        // Create the full path to the HTML file
+        $html_file_path = $directory . $html_file_name;
         // Retrieve movie details from the database
         $sql = "SELECT * FROM movie WHERE id = $movie_id";
         $result = $conn->query($sql);
@@ -112,6 +111,7 @@ $html_file_path = $directory . $html_file_name;
             $description = mysqli_real_escape_string($conn, $row['description']);
             $release_date = $row['release_date'];
             $genre = $row['genre'];
+            $time = $row['time'];
             $director = $row['director'];
             $poster_url = $row['poster_url'];
             $thumbnail_url = $row['thumbnail_url']; // Retrieve new field
@@ -175,52 +175,50 @@ $html_file_path = $directory . $html_file_name;
 
             $recommended9_img_url = $row['recommended9_img_url']; // Retrieve new field
             $recommended9_movie_url = $row['recommended9_movie_url']; // Retrieve new field          
-// Start output buffering to capture HTML content
-ob_start();
+            // Start output buffering to capture HTML content
+            ob_start();
 
-// Include the template to generate HTML (Assuming template.php is in the same directory)
-include('template.php');
+            // Include the template to generate HTML (Assuming template.php is in the same directory)
+            include('template.php');
 
-// Get the generated HTML content
-$html_content = ob_get_clean();
+            // Get the generated HTML content
+            $html_content = ob_get_clean();
 
-// Create the specified directory if it doesn't exist
-if (!is_dir($directory)) {
-    mkdir($directory, 0755, true);
-}
+            // Create the specified directory if it doesn't exist
+            if (!is_dir($directory)) {
+                mkdir($directory, 0755, true);
+            }
 
-// Create a new HTML file for the movie in the specified directory with the title as the file name
-file_put_contents($html_file_path, $html_content);
+            // Create a new HTML file for the movie in the specified directory with the title as the file name
+            file_put_contents($html_file_path, $html_content);
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "movies";
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "movies";
 
-// Reopen the connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+            // Reopen the connection
+            $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check if the connection is successful
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+            // Check if the connection is successful
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
 
-// Update the database with the pathUrl
-$path_url = $html_file_path; // You might want to modify this based on your needs
-$update_sql = "UPDATE movie SET pathUrl = '$path_url' WHERE id = $movie_id";
+            // Update the database with the pathUrl
+            $path_url = $html_file_path; // You might want to modify this based on your needs
+            $update_sql = "UPDATE movie SET pathUrl = '$path_url' WHERE id = $movie_id";
 
-// Check if the query is successful
-if ($conn->query($update_sql) === TRUE) {
-    echo "Movie added successfully!<br>";
-    echo "HTML file created: <a href='$html_file_path'>$html_file_name</a>";
-} else {
-    echo "Error updating pathUrl: " . $conn->error;
-}
+            // Check if the query is successful
+            if ($conn->query($update_sql) === TRUE) {
+                echo "Movie added successfully!<br>";
+                echo "HTML file created: <a href='$html_file_path'>$html_file_name</a>";
+            } else {
+                echo "Error updating pathUrl: " . $conn->error;
+            }
 
-// Close the connection after all operations are done
-$conn->close();
-
-
+            // Close the connection after all operations are done
+            $conn->close();
         } else {
             echo "Movie added successfully, but unable to create HTML file.";
         }
@@ -229,7 +227,8 @@ $conn->close();
     }
 }
 // Function to sanitize a string for use as a file name
-function sanitizeFileName($filename) {
+function sanitizeFileName($filename)
+{
     $filename = preg_replace("/[^a-zA-Z0-9]+/", "-", $filename);
     $filename = strtolower($filename);
     return $filename;
