@@ -242,8 +242,38 @@
     "image": "../../assets/img/blue-beetle.jpg"
   },
   {
-    "title": "Indiana Jones and the Dial of Destiny ",
-    "link": "../../assets/movieplay/indiana-jones-and-the-dial-of-destiny.php",
-    "image": "../../assets/img/indiana-poster.jpg"
+    "title": "Dashing Through The Snow ",
+    "link": "../../assets/movieplay/dashing-through-the-snow-.php",
+    "image": "../../posters/dashing_through_the_snow.jpg"
+  },
+  {
+    "title": "Hunger Games: Ballad..",
+    "link": "../../assets/movieplay/the-hunger-games-the-ballad-of-songbirds-snakes-.php",
+    "image": "../../assets/img/hunger_games.jpg"
+  },
+  {
+    "title": "Retribution",
+    "link": "../../assets/movieplay/retribution.php",
+    "image": "../../posters/retribution.jpg"
+  },
+  {
+    "title": "Mission: Impossible: Dead...",
+    "link": "../../assets/movieplay/mission-impossible-dead-reckoning-part-one.php",
+    "image": "../../posters/mission_impossible.jpg"
+  },
+  {
+    "title": "Trolls Band Together",
+    "link": "../../assets/movieplay/trolls-band-together.php",
+    "image": "../../posters/trolls_band_together.jpg"
+  },
+  {
+    "title": "Good Burger 2",
+    "link": "../../assets/movieplay/good-burger-2.php",
+    "image": "../../assets/img/good_burger2.jpg"
+  },
+  {
+    "title": "Last Call For Istanbul",
+    "link": "../../assets/movieplay/last-call-for-istanbul.php",
+    "image": "../../assets/img/instabul.jpg"
   }
 ]

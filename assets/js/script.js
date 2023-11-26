@@ -7,7 +7,7 @@ const resultsContainer = document.getElementById("resultsContainer");
 let movies = [];
 
 // Load movie data from JSON file
-fetch("../../assets/movieplay/movies.json") // Adjust the path to match the location of the JSON file
+fetch("../../assets/js/movies.json") // Adjust the path to match the location of the JSON file
   .then((response) => response.json())
   .then((data) => {
     movies = data;
